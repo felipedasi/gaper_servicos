@@ -543,11 +543,12 @@ SEU  EVENTO!
     <div class="col s12 l12 m12">
 
 
-<img  class="servico1" src="materialize/img/servicos.png" height="190" width="350">
-  <a class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"><i class="material-icons ">add</i></a>
-  <form v-on:submit.prevent="servico1">
-    <button  type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"></button>
-  </form>
+<img class="servico1" src="materialize/img/servicos.png" height="190" width="350">
+<a class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"><i
+    class="material-icons ">add</i></a>
+<form v-on:submit.prevent="servico1">
+  <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"></button>
+</form>
   <img class="servico2" src="materialize/img/servicos.png" height="190" width="350">
   <a class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"><i
       class="material-icons ">add</i></a>
@@ -716,8 +717,7 @@ SEU  EVENTO!
 </h7>
 </div>
 </div>
-</div>
-</div>
+
 <!--fim fornecedores 4-->
 <!--inicio fornecedores 5--> 
 
@@ -734,23 +734,39 @@ SEU  EVENTO!
 
   <div class="row ">
     <div class="col s12 l12 m12">
+<img class="servico1" src="materialize/img/servicos.png" height="190" width="350">
+<a class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"><i
+    class="material-icons ">add</i></a>
+<form v-on:submit.prevent="servico13">
+  <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"></button>
+</form>
+<img class="servico2" src="materialize/img/servicos.png" height="190" width="350">
+<a class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"><i
+    class="material-icons ">add</i></a>
+<form v-on:submit.prevent="servico14">
+  <button type="submit" class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"></button>
+</form>
+<img class="servico3" src="materialize/img/servicos.png" height="190" width="350">
+<a class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"><i
+    class="material-icons ">add</i></a>
+<form v-on:submit.prevent="servico15">
+  <button type="submit" class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"></button>
+</form>
 
-<img  class="servico1" src="materialize/img/servicos.png" height="190" width="350">
-  <a class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"><i class="material-icons ">add</i></a>
-
-<img  class="servico2 hide-on-med-and-down" src="materialize/img/servicos.png" height="190" width="350">
- <a class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent hide-on-med-and-down"><i class="material-icons ">add</i></a>
-<img  class="servico3" src="materialize/img/servicos.png" height="190" width="350">
-  <a class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"><i class="material-icons ">add</i></a>
-</div></div>
-<h7 class="arraste">arraste para o lado para ver mais serviços</h7>
 </div>
-<!--fim fornecedores 5-->
+</div>
+<h7 class="arraste">arraste para o lado para ver mais serviços <ul>
+    <li v-for="(todo, index) in todos">
+      {{ todo }}
+    </li>
+  </ul>
+</h7>
+
 
 <!--inicio fornecedores 6-->
 
     </div>
-    
+    </div>
     <div class="carousel-item  white-text" href="#four!">
     <div class="parallax-container">
 
@@ -764,18 +780,37 @@ SEU  EVENTO!
 
   <div class="row ">
     <div class="col s12 l12 m12">
-
-<img  class="servico1" src="materialize/img/servicos.png" height="190" width="350">
-  <a class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"><i class="material-icons ">add</i></a>
-
-<img  class="servico2 hide-on-med-and-down" src="materialize/img/servicos.png" height="190" width="350">
- <a class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent hide-on-med-and-down"><i class="material-icons ">add</i></a>
-<img  class="servico3" src="materialize/img/servicos.png" height="190" width="350">
-  <a class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"><i class="material-icons ">add</i></a>
-</div></div>
-<h7 class="arraste">arraste para o lado para ver mais serviços</h7>
+<img class="servico1" src="materialize/img/servicos.png" height="190" width="350">
+<a class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"><i
+    class="material-icons ">add</i></a>
+<form v-on:submit.prevent="servico17">
+  <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"></button>
+</form>
+<!--<img class="servico2" src="materialize/img/servicos.png" height="190" width="350">
+<a class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"><i
+    class="material-icons ">add</i></a>
+<form v-on:submit.prevent="servico14">
+  <button type="submit" class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"></button>
+</form>
+<img class="servico3" src="materialize/img/servicos.png" height="190" width="350">
+<a class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"><i
+    class="material-icons ">add</i></a>
+<form v-on:submit.prevent="servico15">
+  <button type="submit" class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"></button>
+</form>
+-->
 </div>
 </div>
+<h7 class="arraste">arraste para o lado para ver mais serviços <ul>
+    <li v-for="(todo, index) in todos">
+      {{ todo }}
+    </li>
+  </ul>
+</h7>
+</div>
+
+    </div>
+
 <!--fim fornecedores 6-->
 <!--inicio fornecedores 7--> 
 
@@ -792,17 +827,35 @@ SEU  EVENTO!
 
   <div class="row ">
     <div class="col s12 l12 m12">
+<img class="servico1" src="materialize/img/servicos.png" height="190" width="350">
+<a class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"><i
+    class="material-icons ">add</i></a>
+<form v-on:submit.prevent="servico18">
+  <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"></button>
+</form>
+<!--<img class="servico2" src="materialize/img/servicos.png" height="190" width="350">
+<a class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"><i
+    class="material-icons ">add</i></a>
+<form v-on:submit.prevent="servico14">
+  <button type="submit" class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"></button>
+</form>
+<img class="servico3" src="materialize/img/servicos.png" height="190" width="350">
+<a class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"><i
+    class="material-icons ">add</i></a>
+<form v-on:submit.prevent="servico15">
+  <button type="submit" class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"></button>
+</form>
+-->
 
-<img  class="servico1" src="materialize/img/servicos.png" height="190" width="350">
-  <a class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"><i class="material-icons ">add</i></a>
-
-<img  class="servico2 hide-on-med-and-down" src="materialize/img/servicos.png" height="190" width="350">
- <a class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent hide-on-med-and-down"><i class="material-icons ">add</i></a>
-<img  class="servico3" src="materialize/img/servicos.png" height="190" width="350">
-  <a class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"><i class="material-icons ">add</i></a>
-</div></div>
-<h7 class="arraste">arraste para o lado para ver mais serviços</h7>
+<h7 class="arraste">arraste para o lado para ver mais serviços <ul>
+    <li v-for="(todo, index) in todos">
+      {{ todo }}
+    </li>
+  </ul>
+</h7>
 </div>
+</div>
+</div></div>
 <!--fim fornecedores 7-->
 
 
@@ -1220,6 +1273,19 @@ o seu negócio?<br><h3 class="facaparte">
             salao10: "Delta Eventos",
           //  salao11: "Fog Filmes",
            // salao12: "Bitencourt",
+            salao13: "Bia Buffet",
+            salao14: "Rosane Machado",
+            salao15: "Raquel Almeida",
+          
+       
+          //  salao15: "Raquel Almeida",
+          //  salao16: "Raquel Almeida",
+
+                 salao17: "Secret Segurança", 
+                 //cerimonialista
+                 salao18: "Difere Eventos",
+                 //salao19: "Secret Segurança",
+               //  salao20: "Secret Segurança",
           },
           methods: {
             servico1: function () {
@@ -1249,12 +1315,40 @@ o seu negócio?<br><h3 class="facaparte">
                    servico10: function () {
               this.todos.push(this.salao10);
             },
-           // servico11: function () {
-             // this.todos.push(this.salao11);
-           // },
-            //servico12: function () {
-            //  this.todos.push(this.salao12);
-            //},
+            servico11: function () {
+              this.todos.push(this.salao11);
+            },
+            servico12: function () {
+              this.todos.push(this.salao12);
+            },
+            servico13: function () {
+              this.todos.push(this.salao13);
+            },
+          servico14: function () {
+             this.todos.push(this.salao14);
+           },
+          servico15: function () {
+            this.todos.push(this.salao15);
+          },
+             servico16: function () {
+              this.todos.push(this.salao16);
+            },
+            servico17: function () {
+              this.todos.push(this.salao17);
+            },
+         /*   servico14: function () {
+              this.todos.push(this.salao14);
+            },
+            servico15: function () {
+              this.todos.push(this.salao15);
+            },
+              servico15: function () {
+              this.todos.push(this.salao16);
+            }
+            */
+            servico18: function () {
+              this.todos.push(this.salao18);
+            },
             deleteItem: function (index) {
               this.todos.splice(index, 1);
             }
@@ -1266,7 +1360,7 @@ o seu negócio?<br><h3 class="facaparte">
   // start carrousel
    $('.carousel.carousel-slider').carousel({
       fullWidth: true,
-      indicators: false
+      indicators: true
      
    });
 
@@ -1290,7 +1384,12 @@ o seu negócio?<br><h3 class="facaparte">
       $('.carousel').carousel('prev');
    });
         
-
+  var carousel = $('.carousel.carousel-slider').carousel();
+  // Disable all swipping on carousel
+  if (typeof window.ontouchstart !== 'undefined') {
+    carousel.off('touchstart.carousel');
+  }
+  carousel.off('mousedown.carousel');
 
 
 //select do finalizar
