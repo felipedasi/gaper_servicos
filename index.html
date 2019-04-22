@@ -618,7 +618,7 @@ SEU  EVENTO!
 </div>
 
 </div>
-</div>
+
 <!--fim fornecedores 2-->
 
 
@@ -643,29 +643,36 @@ SEU  EVENTO!
 <img class="servico1" src="materialize/img/servicos.png" height="190" width="350">
 <a class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"><i
     class="material-icons ">add</i></a>
-<form v-on:submit.prevent="servico4">
+<form v-on:submit.prevent="servico7">
   <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"></button>
 </form>
 <img class="servico2" src="materialize/img/servicos.png" height="190" width="350">
 <a class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"><i
     class="material-icons ">add</i></a>
-<form v-on:submit.prevent="servico5">
+<form v-on:submit.prevent="servico8">
   <button type="submit" class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"></button>
 </form>
 <img class="servico3" src="materialize/img/servicos.png" height="190" width="350">
 <a class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"><i
     class="material-icons ">add</i></a>
-<form v-on:submit.prevent="servico6">
+<form v-on:submit.prevent="servico9">
   <button type="submit" class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"></button>
 </form>
 
 </div></div>
-<h7 class="arraste">arraste para o lado para ver mais serviços</h7>
+<h7 class="arraste">arraste para o lado para ver mais serviços <ul>
+  <li v-for="(todo, index) in todos">
+    {{ todo }}
+  </li>
+</ul></h7>
 </div>
+</div>
+
+
 <!--fim fornecedores 3-->
 <!--inicio fornecedores 4-->
 
-    </div>
+    
     
     <div class="carousel-item  white-text" href="#four!">
     <div class="parallax-container">
@@ -680,16 +687,35 @@ SEU  EVENTO!
 
   <div class="row ">
     <div class="col s12 l12 m12">
-
-<img  class="servico1" src="materialize/img/servicos.png" height="190" width="350">
-  <a class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"><i class="material-icons ">add</i></a>
-
-<img  class="servico2 hide-on-med-and-down" src="materialize/img/servicos.png" height="190" width="350">
- <a class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent hide-on-med-and-down"><i class="material-icons ">add</i></a>
-<img  class="servico3" src="materialize/img/servicos.png" height="190" width="350">
-  <a class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"><i class="material-icons ">add</i></a>
-</div></div>
-<h7 class="arraste">arraste para o lado para ver mais serviços</h7>
+<img class="servico1" src="materialize/img/servicos.png" height="190" width="350">
+<a class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"><i
+    class="material-icons ">add</i></a>
+<form v-on:submit.prevent="servico10">
+  <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"></button>
+</form>
+<!--<img class="servico2" src="materialize/img/servicos.png" height="190" width="350">
+<a class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"><i
+    class="material-icons ">add</i></a>
+<form v-on:submit.prevent="servico8">
+  <button type="submit" class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"></button>
+</form>
+<img class="servico3" src="materialize/img/servicos.png" height="190" width="350">
+<a class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"><i
+    class="material-icons ">add</i></a>
+<form v-on:submit.prevent="servico9">
+  <button type="submit" class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"></button>
+</form>
+-->
+</div>
+</div>
+<h7 class="arraste">arraste para o lado para ver mais serviços <ul>
+    <li v-for="(todo, index) in todos">
+      {{ todo }}
+    </li>
+  </ul>
+</h7>
+</div>
+</div>
 </div>
 </div>
 <!--fim fornecedores 4-->
@@ -1186,7 +1212,14 @@ o seu negócio?<br><h3 class="facaparte">
             salao4: "El Maestro",
               salao5: "Bia Buffet",
             salao6: "Gabriels",
-           
+            //fotografo
+               salao7: "Foto Eventos",
+            salao8: "Fog Filmes",
+            salao9: "Bitencourt",
+            //som e luz
+            salao10: "Delta Eventos",
+          //  salao11: "Fog Filmes",
+           // salao12: "Bitencourt",
           },
           methods: {
             servico1: function () {
@@ -1204,6 +1237,24 @@ o seu negócio?<br><h3 class="facaparte">
                  servico6: function () {
               this.todos.push(this.salao6);
             },
+              servico7: function () {
+              this.todos.push(this.salao7);
+            },
+              servico8: function () {
+              this.todos.push(this.salao8);
+            },
+              servico9: function () {
+              this.todos.push(this.salao9);
+            },
+                   servico10: function () {
+              this.todos.push(this.salao10);
+            },
+           // servico11: function () {
+             // this.todos.push(this.salao11);
+           // },
+            //servico12: function () {
+            //  this.todos.push(this.salao12);
+            //},
             deleteItem: function (index) {
               this.todos.splice(index, 1);
             }
