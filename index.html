@@ -164,7 +164,7 @@ right: 3%;
 
 
 <!--HEADER-->
-  
+
      <div class="parallax-container">
       <div class="header_ajustavel">
 
@@ -177,7 +177,7 @@ right: 3%;
 <div class="hide-on-med-and-down">
 <div class="barra">
   <img class="barra_laranja"src="materialize/img/barra.png" height="115" width="1.8%">
-  
+
   <div class="texo_barra">
     <h7>em um clique você<br>
 recebe orçamentos dos<br>
@@ -221,9 +221,10 @@ sua festa!</h7>
          <div class="nav-content">
       <ul class=" tab_menu tabs tabs-transparent ">
        <li class="tab"><a class="active" href="#test2"><h6>Inicio</h6></a></li>
-           <li class="tab"><a  href="#test1"><h6>Sobre Nós</h6></a></li>
-         <li class="tab"><a  href="#test1"><h6>Solicitar Orçamento</h6></a></li>
-          <li class="tab"><a  href="#test1"><h6>Contato</h6></a></li>
+           <li class="tab"><a  href="#sobrenos" class="scroll"><h6>Sobre Nós</h6></a></li>
+ 
+         <li class="tab"><a  href="#orc" class="scroll"><h6>Solicitar Orçamento</h6></a></li>
+          <li class="tab"><a href="#contato" class="scroll"><h6>Contato</h6></a></li>
    
       </ul>
     </div>
@@ -526,6 +527,7 @@ SEU  EVENTO!
 <!--inicio fornecedores 1-->
 
     </div>
+    <div id="orc"></div>
     <div id="app">
    
     <!--servico 1-->
@@ -1159,6 +1161,7 @@ SEU  EVENTO!
    <img class="active_sobrenos" src="materialize/img/active_branco.png" height="5" width="53%">
 
 </h6>
+<div id="sobrenos"></div>
 <div class="row">
   <div class="texto_sobrenos col s12 m12 l12 ">
 <h5 class="tex_sobre">Gaper é uma plataforma que veio para facilitar o contato com os fornecedores de serviços para eventos, são diversos<br> fornecedores centralizados em um só lugar, aonde você tenha a confortável tarefa de ver qual a melhor opção para seu<br> evento futuro.<br><br>
@@ -1173,7 +1176,7 @@ Nosso site é gratuito e você pode pedir quantos orçamentos desejar sem se pre
 <h5 class="solicite_sobrenos">SOLICITE UM ORÇAMENTO!
 
    <img class="sublinhado_sobrenos" src="materialize/img/sobrenos_sublinhado.png" height="15" width="105%">
-
+  <div id="contato"></div>
 
 </h5>
 </div></div></div></div></div></div></div>
@@ -1182,13 +1185,14 @@ Nosso site é gratuito e você pode pedir quantos orçamentos desejar sem se pre
 <div class="row">
   <div class="col s12 m12 l12">
 <h6 class="contato_h6">Contato
-   <img class="active_contato" src="materialize/img/active.png" height="5" width="3.3%">
 
 </h6>
 <br><br><br>
+
 <div class="fomrulario">
   <form method="POST" action="contato.php">
 <div class="row">
+
           <div class="input-field col s5 push-s1 ">
             <input id="input_text" type="text" data-length="10" name="nome">
             <label for="input_text">Nome</label>
@@ -1314,7 +1318,16 @@ o seu negócio?<br><h3 class="facaparte">
 <!--modal-->
 
 </body>
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js'></script>
 
+<script type="text/javascript">
+  jQuery(document).ready(function ($) {
+    $(".scroll").click(function (event) {
+      event.preventDefault();
+      $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 800);
+    });
+  });
+</script>
 
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
