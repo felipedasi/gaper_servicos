@@ -204,10 +204,11 @@ sua festa!</h7>
         <li>   <img class="logo_mobile" src="materialize/img/logo_inteiro.png" height="100"></li>
        <li>   <img class="preve_mobile" src="materialize/img/prev_mobile.png" height="35"></li>
         <li>   <img class="barra_menu" src="materialize/img/barra_mobile.png" height="200"></li>
-        <li class="li_mobile"><a href="sass.html">Inicio</a></li>
-        <li><a href="badgesme.html">Sobre Nós</a></li>
-        <li><a href="collapsible.html">Solicitar Orçamento</a></li>
-        <li><a href="mobile.html">Contato</a></li>
+        <li class="li_mobile"><a href="#">Inicio</a></li>
+         <li><a  href="#sobrenos" class="scroll">Sobre Nós</a></li>
+        <li><a href="#orc" class="scroll">Solicitar Orçamento</a></li>
+        <li><a href="#contato" class="scroll">Contato</a></li>
+          <li><a href="collapsible.html">Javascript</a></li>
         <li class="linhamobile"> <img  src="materialize/img/linha_mobile.png" height="1"></li>
         <h6 class="entre_mobile">entre em contato conosco</h6>
          <h7 class="contato_mobile">contato@gaper.net</h7>
@@ -222,8 +223,7 @@ sua festa!</h7>
       <ul class=" tab_menu tabs tabs-transparent ">
        <li class="tab"><a class="active" href="#test2"><h6>Inicio</h6></a></li>
            <li class="tab"><a  href="#sobrenos" class="scroll"><h6>Sobre Nós</h6></a></li>
- 
-         <li class="tab"><a  href="#orc" class="scroll"><h6>Solicitar Orçamento</h6></a></li>
+    <li class="tab"><a  href="#orc" class="scroll"><h6>Solicitar Orçamento</h6></a></li>
           <li class="tab"><a href="#contato" class="scroll"><h6>Contato</h6></a></li>
    
       </ul>
@@ -1001,7 +1001,7 @@ SEU  EVENTO!
 <h4 class="finalizar_orcamento">solicitar orçamentos
 <img class="finaliza_active" src="materialize/img/active.png" height="5" width="75"></h4>
 <br><br><br><br><br><br><br>
-<form method="POST" action="salva.php">
+<form method="POST" action="">
 <div class="formulario">
 
   <!--nome-->
@@ -1085,7 +1085,7 @@ SEU  EVENTO!
    
 
 <button type="submit">Enviar</button>
-
+<h1><a  href="Previo">nofeno</a></h1>
 
       </form></div>
 
@@ -1223,7 +1223,7 @@ Nosso site é gratuito e você pode pedir quantos orçamentos desejar sem se pre
 
           </div>
 
-<button class="enviar_contato" type="submit">Enviar</button>
+<button   class="enviar_contato" type="submit">Enviar</button>
 
 </form>
 <h6 class="contato_msg_final">se você preferir um contato mais próximo, venha conhecer nossa empresa!<br>
@@ -1334,6 +1334,9 @@ o seu negócio?<br><h3 class="facaparte">
  
 
       <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+      <script>
+          $(".button-collapse").sideNav();
+</script>
       <script src="https://unpkg.com/vue/dist/vue.js"></script>
       <script>
         new Vue({
