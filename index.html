@@ -527,6 +527,7 @@ SEU  EVENTO!
 
     </div>
     <div id="app">
+   
     <!--servico 1-->
     <div class="carousel-item  white-text" href="#one!">
     <div class="parallax-container">
@@ -536,12 +537,12 @@ SEU  EVENTO!
 <h4 class="solicitar_orcamento">solicitar orçamentos
 <img class="orc_active" src="materialize/img/active_black.png" height="5" width="75">
 </h4>
+
 <h3 class="saloes_orcamento">SALÕES</h3>
 <br>
 
  <div class="row ">
     <div class="col s12 l12 m12">
-
 
 <img class="servico1" src="materialize/img/servicos.png" height="190" width="350">
 <a class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent" ><i
@@ -549,11 +550,11 @@ SEU  EVENTO!
 <form v-on:submit.prevent="servico1">
   <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent "    onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
 </form>
-  <img class="servico2" src="materialize/img/servicos.png" height="190" width="350">
-  <a class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"><i
+  <img class="servico3" src="materialize/img/servicos.png" height="190" width="350">
+  <a class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"><i
       class="material-icons ">add</i></a>
-  <form v-on:submit.prevent="servico2">
-    <button type="submit" class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"     onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
+  <form v-on:submit.prevent="servico3">
+    <button type="submit" class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"     onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
   </form>
 <!--ainda não disponivel <img class="servico3" src="materialize/img/servicos.png" height="190" width="350">
     <a class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"><i
@@ -596,15 +597,17 @@ SEU  EVENTO!
     <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent "
       onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
 
-"></button>
+</button>
   </form>
-  <img class="servico2" src="materialize/img/servicos.png" height="190" width="350">
+  <div class="hide-on-med-and-down">
+  <img class="servico2"      src="materialize/img/servicos.png" height="190" width="350">
   <a class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"><i
       class="material-icons ">add</i></a>
   <form v-on:submit.prevent="servico5">
   <button type="submit" class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent "
        onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
   </form>
+  </div>
     <img class="servico3" src="materialize/img/servicos.png" height="190" width="350">
     <a class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"><i
         class="material-icons ">add</i></a>
@@ -652,12 +655,16 @@ SEU  EVENTO!
 <form v-on:submit.prevent="servico7">
   <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"     onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
 </form>
+  <div class="hide-on-med-and-down">
+
 <img class="servico2" src="materialize/img/servicos.png" height="190" width="350">
+
 <a class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"><i
     class="material-icons ">add</i></a>
 <form v-on:submit.prevent="servico8">
   <button type="submit" class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"    onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
 </form>
+</div>
 <img class="servico3" src="materialize/img/servicos.png" height="190" width="350">
 <a class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"><i
     class="material-icons ">add</i></a>
@@ -699,12 +706,17 @@ SEU  EVENTO!
 <form v-on:submit.prevent="servico10">
   <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"     onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
 </form>
-<!--<img class="servico2" src="materialize/img/servicos.png" height="190" width="350">
+<!--
+    <div class="hide-on-med-and-down">
+
+  
+  <img class="servico2" src="materialize/img/servicos.png" height="190" width="350">
 <a class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"><i
     class="material-icons ">add</i></a>
 <form v-on:submit.prevent="servico8">
   <button type="submit" class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"  id="adicionado"></button>
 </form>
+</div>
 <img class="servico3" src="materialize/img/servicos.png" height="190" width="350">
 <a class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"><i
     class="material-icons ">add</i></a>
@@ -745,12 +757,16 @@ SEU  EVENTO!
 <form v-on:submit.prevent="servico13">
   <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"     onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
 </form>
+  <div class="hide-on-med-and-down">
+
 <img class="servico2" src="materialize/img/servicos.png" height="190" width="350">
 <a class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"><i
     class="material-icons ">add</i></a>
 <form v-on:submit.prevent="servico14">
   <button type="submit" class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"    onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
 </form>
+
+</div>
 <img class="servico3" src="materialize/img/servicos.png" height="190" width="350">
 <a class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"><i
     class="material-icons ">add</i></a>
@@ -791,12 +807,16 @@ SEU  EVENTO!
 <form v-on:submit.prevent="servico17">
   <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"    onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
 </form>
-<!--<img class="servico2" src="materialize/img/servicos.png" height="190" width="350">
+<!--
+    <div class="hide-on-med-and-down">
+
+  <img class="servico2" src="materialize/img/servicos.png" height="190" width="350">
 <a class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"><i
     class="material-icons ">add</i></a>
 <form v-on:submit.prevent="servico14">
   <button type="submit" class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"  id="adicionado"></button>
 </form>
+</div>
 <img class="servico3" src="materialize/img/servicos.png" height="190" width="350">
 <a class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"><i
     class="material-icons ">add</i></a>
@@ -838,12 +858,16 @@ SEU  EVENTO!
 <form v-on:submit.prevent="servico18">
   <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"    onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
 </form>
-<!--<img class="servico2" src="materialize/img/servicos.png" height="190" width="350">
+<!--
+    <div class="hide-on-med-and-down">
+
+  <img class="servico2" src="materialize/img/servicos.png" height="190" width="350">
 <a class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"><i
     class="material-icons ">add</i></a>
 <form v-on:submit.prevent="servico14">
   <button type="submit" class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent" id="adicionado"></button>
 </form>
+</div>
 <img class="servico3" src="materialize/img/servicos.png" height="190" width="350">
 <a class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"><i
     class="material-icons ">add</i></a>
@@ -1081,6 +1105,43 @@ SEU  EVENTO!
 
 </div>
 </div>
+
+<!--versao mobile-->
+
+
+
+<!---final da mobile-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
 <!--sobre nós-->
 <div class="sobrenos">
 <div class="row">
@@ -1242,17 +1303,6 @@ o seu negócio?<br><h3 class="facaparte">
 <button id="help" onclick="next(0)">help</button>
 
 <a id="menu" class="waves-effect waves-light btn btn-floating"><i class="material-icons">menu</i></a>
-
-
-
-<!-- Tap Target Structure -->
-<div class="tap-target" data-target="menu">
-  <div class="tap-target-content">
-    <h5>Title</h5>
-    <p>A bunch of text</p>
-    <div class="next" onclick="next(1)">Next</div>
-  </div>
-</div>
 
 
 
