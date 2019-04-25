@@ -1,0 +1,82 @@
+
+@font-face {
+   font-family: petal;
+    src: url(fontes/petal.ttf);
+font-weight: bold; 
+}
+
+@font-face {
+   font-family: Roboto, LightItalic;
+    src: url(fontes/Roboto-LightItalic.ttf);
+  }
+
+h7{
+   font-family: Roboto, LightItalic;
+
+ }
+h4{
+ 
+ font-family: Roboto, LightItalic;
+ position: absolute;
+ left:1%;
+}
+
+h1{
+  font-family: petal;
+ font-size: 5.0em;
+
+}
+
+span,p{
+  font-family: Roboto,Light;
+  color:#999999;
+}
+
+.tab_menu{
+  position: absolute;
+  left:-2%;
+}
+
+.menu
+{
+position: absolute;
+left:30%;
+right: 10%;
+top:3%;
+
+}
+.xxx
+{
+  position:absolute;
+  left:12%;
+  top:23%;
+  color:#FFF;
+  float:left;
+
+}
+/*imagem no botão submit*/
+button {
+display:block;
+width:200px;
+height:100px;
+text-indent:-9000em;
+overflow:hidden;
+background:url('materialize/img/finalizar.png') no-repeat 0 0;
+}
+input-field{
+   font-family: Roboto,Light,Italic;
+}
+
+
+/*botão contato*/
+.enviar_contato{
+
+display:block;
+width:200px;
+height:100px;
+text-indent:-9000em;
+overflow:hidden;
+background:url('materialize/img/enviar.png') no-repeat 0 0;
+position: absolute;
+right: 3%;
+}
