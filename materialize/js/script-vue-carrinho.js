@@ -2,6 +2,7 @@ new Vue({
   el: "#app",
   data: {
     todos: [],
+    titulo: "variavel teste",
     salao1: "Clube de Caça e Pesca",
     //  salao2: "G2",
     //salao

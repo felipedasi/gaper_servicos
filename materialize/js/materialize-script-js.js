@@ -106,3 +106,4 @@ function closeAll() {
   $(".tap-target").tapTarget("close");
   $(".tap-target").tapTarget("destroy");
 }
+//modal 2

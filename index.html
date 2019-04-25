@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Document</title>
+  <title>GAPER</title>
   <!---materialize css -->
   <link rel="stylesheet" href="materialize/css/materialize.css" />
   <link rel="stylesheet" href="materialize/css/custom.css" />
@@ -22,10 +22,46 @@
   <script src="materialize/noUiSlider/nouislider.js"></script>
   <script src="materialize/js/js-geral-index.js"></script>
   <script src="materialize/js/js-scroll-menu.js"></script>
+  <style>
+    .button {
+  display: block;
+  width: 200px;
+  height: 100px;
+  text-indent: -9000em;
+  overflow: hidden;
+  background: url("materialize/img/finalizar.png") no-repeat 0 0;
+}
+.delete-item {
+  position:absolute;
+
+
+  width: 20px;
+  height: 20px;
+
+  background: url("materialize/img/delet.png") no-repeat 0 0;
+}
+    </style>
 </head>
 
 <body>
   <div id="app">
+  
+<!--carrinho de compras-->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h5 class="center-align">SERVIÇOS       SOLICITADOS</h5>
+        <ul class="center-align ul-produtos">
+                        <li v-for="(todo, index) in todos">
+      
+                           {{ todo }}<button class="delete-item waves-effect waves-light" v-on:click="deleteItem(index)"></button>
+                        </li>
+                      </ul>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect btn-flat">Fechar</a>
+      </div>
+    </div>
+    <!--final do carrinho-->
     <!--header-->
     <header1></header1>
     <!--final header-->
@@ -433,7 +469,8 @@
 
               </div>
               <div id="orc"></div>
-              <div id="app">
+      <!-- Modal Trigger -->
+      <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
 
                 <!--servico 1-->
                 <div class="carousel-item  white-text" href="#one!">
@@ -448,20 +485,7 @@
 
                     <h3 class="saloes_orcamento">SALÕES</h3>
                     <br>
-<!-- Modal Trigger -->
-<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
-
-<!-- Modal Structure -->
-<div id="modal1" class="modal">
-  <div class="modal-content">
-    <h4>Modal Header</h4>
-    <p>A bunch of text</p>
-  </div>
-  <div class="modal-footer">
-    <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
-  </div>
-</div>
-                    <div class="row ">
+             <div class="row ">
                       <div class="col s12 l12 m12">
 
                         <img class="servico1" src="materialize/img/img_cpp.png" height="190" width="350">
@@ -488,11 +512,7 @@ ainda não disponivel <img class="servico3" src="materialize/img/servicos.png" h
                       </div>
                     </div>
                     <h7 class="arraste">arraste para o lado para ver mais serviços
-                      <ul>
-                        <li v-for="(todo, index) in todos">
-                          {{ todo }}
-                        </li>
-                      </ul>
+                  
                     </h7>
                   </div>
                 </div>
@@ -953,7 +973,7 @@ ainda não disponivel <img class="servico3" src="materialize/img/servicos.png" h
                         <label for="textarea1">Observação</label>
                       </div>
 
-                      <button type="submit">Enviar</button>
+                      <button type="submit" class="button">Enviar</button>
 
 
                       <img class="carrinho_finalizar" src="materialize/img/carrinho.png" height="45">
@@ -1153,3 +1173,14 @@ ainda não disponivel <img class="servico3" src="materialize/img/servicos.png" h
 </html>
 
 <script src="https://v1.vuejs.org/js/vue.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('.modal');
+      var instances = M.Modal.init(elems, options);
+    });
+
+    // Or with jQuery
+
+    $(document).ready(function () {
+      $('.modal').modal();
+    });</script>
