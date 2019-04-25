@@ -52,18 +52,10 @@ p {
 input-field {
   font-family: Roboto, Light, Italic;
 }
-
-/*botão contato*/
-.enviar_contato {
-  display: block;
-  width: 200px;
-  height: 100px;
-  text-indent: -9000em;
-  overflow: hidden;
-  background: url("materialize/img/enviar.png") no-repeat 0 0;
-  position: absolute;
-  right: 3%;
+a {
+  color: #ddd;
 }
+
 .ul-produtos {
   font-family: ROBOTO;
   padding-top: 10px;
