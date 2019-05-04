@@ -1,452 +1,484 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-	<title>GAPER-seu evento em um click</title>
-	<!---materialize css -->
-<link rel="stylesheet" href="materialize/css/materialize.css">
-<link rel="stylesheet" href="materialize/css/custom.css">
-<link rel="stylesheet" href="materialize/css/reset.css">
-<link rel="stylesheet" href="materialize/css/display.css">
-<link rel="stylesheet" href="materialize/css/style.css">
-<link rel="stylesheet" href="materialize/css/style-geral-index.css">
+    <title>GAPER-seu evento em um click</title>
+    <!---materialize css -->
+    <link rel="stylesheet" href="materialize/css/materialize.css">
+    <link rel="stylesheet" href="materialize/css/custom.css">
+    <link rel="stylesheet" href="materialize/css/reset.css">
+    <link rel="stylesheet" href="materialize/css/display.css">
+    <link rel="stylesheet" href="materialize/css/style.css">
+    <link rel="stylesheet" href="materialize/css/style-geral-index.css">
 
 
 
-<script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!-- javascript do materialize-->
-	<script  src="materialize/js/materialize.js"></script>
-  <script  src="materialize/noUiSlider/nouislider.js"></script>
-  <script src="materialize/js/js-geral-index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- javascript do materialize-->
+    <script src="materialize/js/materialize.js"></script>
+    <script src="materialize/noUiSlider/nouislider.js"></script>
+    <script src="materialize/js/js-geral-index.js"></script>
     <script src="materialize/js/js-scroll-menu.js"></script>
     <style>
-      /*botão contato*/
-.enviar_contato {
-  display: block;
-  width: 200px;
-  height: 100px;
-  text-indent: -9000em;
-  overflow: hidden;
-  background: url("materialize/img/enviar.png") no-repeat 0 0;
-  position: absolute;
-  right: 3%;
-}
-  .btn-finaliza {
-  display: block;
-  width: 200px;
-  height: 100px;
-  text-indent: -9000em;
-  overflow: hidden;
-  background: url("materialize/img/enviar.png") no-repeat 0 0;
-}
-.btn-carrinho{
-    width: 90px;
-  height: 90px;
-    background: url("materialize/img/carrinho.png") no-repeat 0 0;
-    opacity: 0.7;
-}
-.delete-item {
-  position:absolute;
-
-
-  width: 20px;
-  height: 20px;
-
-  background: url("materialize/img/delet.png") no-repeat 0 0;
-}
-.itens-add{
-  color:red;
-  position:absolute;
-  right: 120px;
-  top:68px;
-  z-index:9999;
-
-}
-
-      </style>
+        /*botão contato*/
+        
+        .enviar_contato {
+            display: block;
+            width: 200px;
+            height: 100px;
+            text-indent: -9000em;
+            overflow: hidden;
+            background: url("materialize/img/enviar.png") no-repeat 0 0;
+            position: absolute;
+            right: 3%;
+        }
+        
+        .btn-finaliza {
+            display: block;
+            width: 200px;
+            height: 100px;
+            text-indent: -9000em;
+            overflow: hidden;
+            background: url("materialize/img/enviar.png") no-repeat 0 0;
+        }
+        
+        .btn-carrinho {
+            width: 90px;
+            height: 90px;
+            background: url("materialize/img/carrinho.png") no-repeat 0 0;
+            opacity: 0.7;
+        }
+        
+        .delete-item {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: url("materialize/img/delet.png") no-repeat 0 0;
+        }
+        
+        .itens-add {
+            color: red;
+            position: absolute;
+            right: 120px;
+            top: 68px;
+            z-index: 9999;
+        }
+    </style>
 
 </head>
+
 <body>
 
 
 
-<!--HEADER-->
+    <!--HEADER-->
 
-     <div class="parallax-container">
-      <div class="header_ajustavel">
+    <div class="parallax-container">
+        <div class="header_ajustavel">
 
-      <div class="parallax"><img class="responsve-img"src="materialize/img/bg_inicio.png" height="650"></div>
-    <!--logo-->
+            <div class="parallax"><img class="responsve-img" src="materialize/img/bg_inicio.png" height="650"></div>
+            <!--logo-->
 
-  <img class="carrinho"src="materialize/img/carrinho.png" height="50">
-  <img class="logo hide-on-med-and-down"src="materialize/img/simbolo.png" height="90">
-<img class="laranja"src="materialize/img/ONDAS_ORANGE.png" height="70">
-<div class="hide-on-med-and-down">
-<div class="barra">
-  <img class="barra_laranja"src="materialize/img/barra.png" height="115" width="1.8%">
+            <img class="carrinho" src="materialize/img/carrinho.png" height="50">
+            <img class="logo hide-on-med-and-down" src="materialize/img/simbolo.png" height="90">
+            <img class="laranja" src="materialize/img/ONDAS_ORANGE.png" height="70">
+            <div class="hide-on-med-and-down">
+                <div class="barra">
+                    <img class="barra_laranja" src="materialize/img/barra.png" height="115" width="1.8%">
 
-  <div class="texo_barra">
-    <h7>em um clique você<br>
-recebe orçamentos dos<br>
-melhores serviços para<br>
-sua festa!</h7>
+                    <div class="texo_barra">
+                        <h7>em um clique você<br> recebe orçamentos dos<br> melhores serviços para<br> sua festa!</h7>
 
-  </div>  
-   
+                    </div>
 
-  </div>
-</div>
-<a href="#orc2" class="scroll">
 
-  <h5 class="solicita">SOLICITAR ORÇAMENTO</h5>
-      <img class="active" src="materialize/img/active.png" height="6"></a>
-     
-<!--menu mobile-->
+                </div>
+            </div>
+            <a href="#orc2" class="scroll">
+
+                <h5 class="solicita">SOLICITAR ORÇAMENTO
+                    <img class="active" src="materialize/img/active.png" height="6"></a>
+            </h5>
+
+            <!--menu mobile-->
 
 
 
-    <div class="nav-wrapper hide-on-large-only">
-      
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons medium cor_icone">menu</i></a>
-  
-      <ul class="menu_mobile_ul side-nav" id="mobile-demo">
-        <li>   <img class="logo_mobile" src="materialize/img/logo_inteiro.png" height="100"></li>
-       <li>   <img class="preve_mobile" src="materialize/img/prev_mobile.png" height="35"></li>
-        <li>   <img class="barra_menu" src="materialize/img/barra_mobile.png" height="200"></li>
-        <li class="li_mobile"><a href="#">Inicio</a></li>
-         <li><a  href="#sobrenos" class="scroll">Sobre Nós</a></li>
-        <li><a href="#orc" class="scroll">Solicitar Orçamento</a></li>
-        <li><a href="#contato" class="scroll">Contato</a></li>
-          <li><a href="collapsible.html">Javascript</a></li>
-        <li class="linhamobile"> <img  src="materialize/img/linha_mobile.png" height="1"></li>
-        <h6 class="entre_mobile">entre em contato conosco</h6>
-         <h7 class="contato_mobile">contato@gaper.net</h7>
-      </ul>
+            <div class="nav-wrapper hide-on-large-only">
+
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons medium cor_icone">menu</i></a>
+
+                <ul class="menu_mobile_ul side-nav" id="mobile-demo">
+                    <li> <img class="logo_mobile" src="materialize/img/logo_inteiro.png" height="100"></li>
+                    <li> <img class="preve_mobile" src="materialize/img/prev_mobile.png" height="35"></li>
+                    <li> <img class="barra_menu" src="materialize/img/barra_mobile.png" height="200"></li>
+                    <li class="li_mobile"><a href="#">Inicio</a></li>
+                    <li><a href="#sobrenos" class="scroll">Sobre Nós</a></li>
+                    <li><a href="#orc" class="scroll">Solicitar Orçamento</a></li>
+                    <li><a href="#contato" class="scroll">Contato</a></li>
+                    <li><a href="collapsible.html">Javascript</a></li>
+                    <li class="linhamobile"> <img src="materialize/img/linha_mobile.png" height="1"></li>
+                    <h6 class="entre_mobile">entre em contato conosco</h6>
+                    <h7 class="contato_mobile">contato@gaper.net</h7>
+                </ul>
+            </div>
+
+            <!--menu-->
+            <div class="hide-on-med-and-down">
+                <div class="menu_grande">
+                    <div class="menu">
+                        <div class="nav-content">
+                            <ul class=" tab_menu tabs tabs-transparent ">
+                                <li class="tab">
+                                    <a class="active" href="#test2">
+                                        <h6>Inicio</h6>
+                                    </a>
+                                </li>
+                                <li class="tab">
+                                    <a href="#sobrenos" class="scroll">
+                                        <h6>Sobre Nós</h6>
+                                    </a>
+                                </li>
+                                <li class="tab">
+                                    <a href="#orc" class="scroll">
+                                        <h6>Solicitar Orçamento</h6>
+                                    </a>
+                                </li>
+                                <li class="tab">
+                                    <a href="#contato" class="scroll">
+                                        <h6>Contato</h6>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--xxx-->
+            <div class="xxx">
+                <img class="responsiimg" src="materialize/img/xxx.png" height="75">
+                <h1>COMECE A<br> ORGANIZAR
+                    <br> SEU EVENTO!
+                    <img class="seta" src="materialize/img/SETA_HEADER.png" height="55">
+                    <img class="circulo_laranja" src="materialize/img/2.png" height="55">
+
+
+                </h1>
+
+
+
+
+
+
+            </div>
+
+            <!--circulo_branco-->
+            <div class="circulo_branco">
+                <img class="responsiimg" src="materialize/img/1.png" height="55">
+
+            </div>
+            <!--ondas black-->
+            <div class="ondasblack">
+                <img class="responsve-img" src="materialize/img/ONDAS_BLACK.png" height="55">
+            </div>
+
+
+        </div>
     </div>
- 
-<!--menu-->
-<div class="hide-on-med-and-down">
-<div class="menu_grande">
-      <div class="menu">
-         <div class="nav-content">
-      <ul class=" tab_menu tabs tabs-transparent ">
-       <li class="tab"><a class="active" href="#test2"><h6>Inicio</h6></a></li>
-           <li class="tab"><a  href="#sobrenos" class="scroll"><h6>Sobre Nós</h6></a></li>
-    <li class="tab"><a  href="#orc" class="scroll"><h6>Solicitar Orçamento</h6></a></li>
-          <li class="tab"><a href="#contato" class="scroll"><h6>Contato</h6></a></li>
-   
-      </ul>
+    <div class="container">
+        <div class="row">
+
+            <!--destaques-->
+            <div class="col s12 l12 m12">
+
+
+
+                <!--destaques desktop-->
+                <div class="row">
+                    <div class="col s12 l12 m12">
+                        <div class="destaques"><br><br>
+                            <h4 class="destaques_titulo">destaques<img class="active_destaque" src="materialize/img/active_black.png" height="7" width="48%"></h4>
+
+                            <br><br><br>
+
+                            <!--box destaques 1-->
+                            <!--primeiro-->
+                            <div class="card-action lighten-1 deep-orange textura">
+                                <a href="#" class="white-text botao-card">Conhecer Sala</a>
+                            </div>
+                            <div class="col s3 m3 l3  ">
+                                <div class="card small  hide-on-med-and-down ">
+                                    <div class="card-image waves-effect waves-block waves-light ">
+                                        <img class="activator" src="materialize/img/bia.png">
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="card-title activator #9e9e9e grey-text text-darken-4"> &nbsp;titulo<i class="material-icons right">more_vert</i><br></span>
+
+                                    </div>
+                                    <div class="card-reveal">
+                                        <span class="card-title grey-text text-darken-4">Titulo<i class="material-icons right">close</i></span>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                                            anim id est laborum.</p>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+                            <!--segundo-->
+                            <div class="col s3 m3 l3">
+
+                                <div class="card small   ">
+                                    <div class="card-image waves-effect waves-block waves-light ">
+                                        <img class="activator" src="materialize/img/bia.png">
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="card-title activator #9e9e9e grey-text text-darken-4"> &nbsp;titulo<i class="material-icons right">more_vert</i><br></span>
+
+                                    </div>
+                                    <div class="card-reveal">
+                                        <span class="card-title grey-text text-darken-4">Titulo<i class="material-icons right">close</i></span>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                                            anim id est laborum.</p>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                            <!--terceiro-->
+                            <div class="col s3 m3 l3">
+
+                                <div class="card small ">
+                                    <div class="card-image waves-effect waves-block waves-light ">
+                                        <img class="activator" src="materialize/img/bia.png">
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="card-title activator #9e9e9e grey-text text-darken-4"> &nbsp;titulo<i class="material-icons right">more_vert</i><br></span>
+
+                                    </div>
+                                    <div class="card-reveal">
+                                        <span class="card-title grey-text text-darken-4">Titulo<i class="material-icons right">close</i></span>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                                            anim id est laborum.</p>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                            <!--quarto-->
+                            <div class="col s3 m3 l3">
+
+                                <div class="card small hide-on-med-and-down">
+                                    <div class="card-image waves-effect waves-block waves-light ">
+                                        <img class="activator" src="materialize/img/bia.png">
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="card-title activator #9e9e9e grey-text text-darken-4"> &nbsp;titulo<i class="material-icons right">more_vert</i><br></span>
+
+                                    </div>
+                                    <div class="card-reveal">
+                                        <span class="card-title grey-text text-darken-4">Titulo<i class="material-icons right">close</i></span>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                                            anim id est laborum.</p>
+                                    </div>
+                                </div>
+
+
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col s3 m3 l3">
+
+                            <div class="card small hide-on-med-and-down">
+                                <div class="card-image waves-effect waves-block waves-light ">
+                                    <img class="activator" src="materialize/img/bia.png">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title activator #9e9e9e grey-text text-darken-4"> &nbsp;titulo<i class="material-icons right">more_vert</i><br></span>
+
+                                </div>
+                                <div class="card-reveal">
+                                    <span class="card-title grey-text text-darken-4">Titulo<i class="material-icons right">close</i></span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                                        est laborum.</p>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                        <!--segundo-->
+                        <div class="col s3 m3 l3">
+
+                            <div class="card small ">
+                                <div class="card-image waves-effect waves-block waves-light ">
+                                    <img class="activator" src="materialize/img/bia.png">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title activator #9e9e9e grey-text text-darken-4"> &nbsp;titulo<i class="material-icons right">more_vert</i><br></span>
+
+                                </div>
+                                <div class="card-reveal">
+                                    <span class="card-title grey-text text-darken-4">Titulo<i class="material-icons right">close</i></span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                                        est laborum.</p>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                        <!--terceiro-->
+                        <div class="col s3 m3 l3  hide-on-med-and-down ">
+
+                            <div class="card small ">
+                                <div class="card-image waves-effect waves-block waves-light ">
+                                    <img class="activator" src="materialize/img/bia.png">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title activator #9e9e9e grey-text text-darken-4"> &nbsp;titulo<i class="material-icons right">more_vert</i><br></span>
+
+                                </div>
+                                <div class="card-reveal">
+                                    <span class="card-title grey-text text-darken-4">Titulo<i class="material-icons right">close</i></span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                                        est laborum.</p>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                        <!--quarto-->
+                        <div class="col s3 m3 l3">
+
+                            <div class="card small  ">
+                                <div class="card-image waves-effect waves-block waves-light ">
+                                    <img class="activator" src="materialize/img/bia.png">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title activator #9e9e9e grey-text text-darken-4"> &nbsp;titulo<i class="material-icons right">more_vert</i><br></span>
+
+                                </div>
+                                <div class="card-reveal">
+                                    <span class="card-title grey-text text-darken-4">Titulo<i class="material-icons right">close</i></span>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                                        est laborum.</p>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+            <div class="row">
+                <div class="col s12 m12 l12  right-align">
+                    <br>
+
+                    <br><br><br><br>
+                    <div class="barr_color">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-</div>
-</div>
-<!--xxx-->
-<div class="xxx">
-<img class="responsiimg"src="materialize/img/xxx.png" height="75">
-<h1>COMECE A<br>
-ORGANIZAR<br>
-SEU  EVENTO!
-<img class="seta"src="materialize/img/SETA_HEADER.png" height="55">
-<img class="circulo_laranja"src="materialize/img/2.png" height="55">
-  
-  
-</h1>
-
-
-
-
-
-
-</div>
-
-<!--circulo_branco-->
-<div class="circulo_branco">
-<img class="responsiimg"src="materialize/img/1.png" height="55">
-
-</div> 
-<!--ondas black-->
-<div class="ondasblack">
-<img class="responsve-img"src="materialize/img/ONDAS_BLACK.png" height="55">
-</div>
-
-
-</div>
-</div>
-<div class="container">
-<div class="row">
-
-<!--destaques-->
-<div class="col s12 l12 m12">
-
-
-
-<!--destaques desktop-->
-<div class="row">
-  <div class="col s12 l12 m12">
-    <div class="destaques"><br><br>
-  <h4 class="destaques_titulo">destaques<img class="active_destaque"src="materialize/img/active_black.png" height="7" width="48%"></h4>
-  
-<br><br><br>
-
-<!--box destaques 1-->
-<!--primeiro-->
-
-  <div class="col s3 m3 l3  ">
-<div class="card small  hide-on-med-and-down ">
-    <div class="card-image waves-effect waves-block waves-light ">
-      <img class="activator" src="materialize/img/bia.png">
     </div>
-    <div class="card-content">
-      <span class="card-title activator #9e9e9e grey-text text-darken-4"> &nbsp;titulo<i class="material-icons right">more_vert</i><br></span>
- 
     </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Titulo<i class="material-icons right">close</i></span>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+
     </div>
-  </div>
 
 
 
-  </div>
-<!--segundo-->
-  <div class="col s3 m3 l3">
-
-<div class="card small   ">
-    <div class="card-image waves-effect waves-block waves-light ">
-      <img class="activator" src="materialize/img/bia.png">
     </div>
-    <div class="card-content">
-      <span class="card-title activator #9e9e9e grey-text text-darken-4"> &nbsp;titulo<i class="material-icons right">more_vert</i><br></span>
- 
     </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Titulo<i class="material-icons right">close</i></span>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
-  </div>
-
-
-
-  </div>
-
-<!--terceiro-->
-  <div class="col s3 m3 l3">
-
-<div class="card small ">
-    <div class="card-image waves-effect waves-block waves-light ">
-      <img class="activator" src="materialize/img/bia.png">
     </div>
-    <div class="card-content">
-      <span class="card-title activator #9e9e9e grey-text text-darken-4"> &nbsp;titulo<i class="material-icons right">more_vert</i><br></span>
- 
+
     </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Titulo<i class="material-icons right">close</i></span>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     </div>
-  </div>
-
-
-
-  </div>
-
-<!--quarto-->
-  <div class="col s3 m3 l3">
-
-<div class="card small hide-on-med-and-down">
-    <div class="card-image waves-effect waves-block waves-light ">
-      <img class="activator" src="materialize/img/bia.png">
     </div>
-    <div class="card-content">
-      <span class="card-title activator #9e9e9e grey-text text-darken-4"> &nbsp;titulo<i class="material-icons right">more_vert</i><br></span>
- 
+
+
+
     </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Titulo<i class="material-icons right">close</i></span>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-  </div>
 
-
-
-  </div>
-
-</div>
-
-
-</div>
-
-  <div class="row">
-  <div class="col s3 m3 l3">
-
-<div class="card small hide-on-med-and-down">
-    <div class="card-image waves-effect waves-block waves-light ">
-      <img class="activator" src="materialize/img/bia.png">
-    </div>
-    <div class="card-content">
-      <span class="card-title activator #9e9e9e grey-text text-darken-4"> &nbsp;titulo<i class="material-icons right">more_vert</i><br></span>
- 
-    </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Titulo<i class="material-icons right">close</i></span>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-  </div>
-
-
-
-  </div>
-<!--segundo-->
-  <div class="col s3 m3 l3">
-
-<div class="card small ">
-    <div class="card-image waves-effect waves-block waves-light ">
-      <img class="activator" src="materialize/img/bia.png">
-    </div>
-    <div class="card-content">
-      <span class="card-title activator #9e9e9e grey-text text-darken-4"> &nbsp;titulo<i class="material-icons right">more_vert</i><br></span>
- 
-    </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Titulo<i class="material-icons right">close</i></span>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-  </div>
-
-
-
-  </div>
-
-<!--terceiro-->
-  <div class="col s3 m3 l3  hide-on-med-and-down ">
-
-<div class="card small ">
-    <div class="card-image waves-effect waves-block waves-light ">
-      <img class="activator" src="materialize/img/bia.png">
-    </div>
-    <div class="card-content">
-      <span class="card-title activator #9e9e9e grey-text text-darken-4"> &nbsp;titulo<i class="material-icons right">more_vert</i><br></span>
- 
-    </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Titulo<i class="material-icons right">close</i></span>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-  </div>
-
-
-
-  </div>
-
-<!--quarto-->
-  <div class="col s3 m3 l3">
-
-<div class="card small  ">
-    <div class="card-image waves-effect waves-block waves-light ">
-      <img class="activator" src="materialize/img/bia.png">
-    </div>
-    <div class="card-content">
-      <span class="card-title activator #9e9e9e grey-text text-darken-4"> &nbsp;titulo<i class="material-icons right">more_vert</i><br></span>
- 
-    </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Titulo<i class="material-icons right">close</i></span>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
-  </div>
-
-
-
-  </div>
-
-
-
-
-</div>
-
-
-
-
-</div>
-
-
-
-</div>
-
-
- <div class="row">
-<div class="col s12 m12 l12  right-align">
-  <br>
-
-<br><br><br><br>
-<div class="barr_color">
-  </div>
-</div>
-  </div></div></div></div></div>
-
-
-</div>
-
-
-
-</div></div></div></div>
-
-</div></div></div>
-
-
-
-</div>
-
-<!--orçamentos-->
-<!--carrinho de compras-->
+    <!--orçamentos-->
+    <!--carrinho de compras-->
     <div id="app">
-<div id="modal1" class="modal">
-  <div class="modal-content">
-    <h5 class="center-align">SERVIÇOS SOLICITADOS</h5>
-    <ul class="center-align ul-produtos">
-      <li v-for="(todo, index) in todos">
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <h5 class="center-align">SERVIÇOS SOLICITADOS</h5>
+                <ul class="center-align ul-produtos">
+                    <li v-for="(todo, index) in todos">
 
-        {{ todo }}<button class="delete-item waves-effect waves-light" v-on:click="deleteItem(index)"></button>
-      </li>
-    </ul>
-  </div>
-  <div class="modal-footer">
-    <a href="#!" class="modal-close waves-effect btn-flat">Fechar</a>
+                        {{ todo }}<button class="delete-item waves-effect waves-light" v-on:click="deleteItem(index)"></button>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect btn-flat">Fechar</a>
 
-  </div>
-</div>
+            </div>
+        </div>
 
-<!--final do carrinho-->
-<div class="row">
-  <div class="col s12 m12 l12">
-         
-
-
-
- 
-    <div class="carousel carousel-slider center" data-indicators="true">
-    <div class="carousel-fixed-item center">
-
-     <a href="Siguiente" class=" moveNextCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons large cor_icone  right middle-indicator-text">chevron_right</i></a>
-     <a href="Previo" class="movePrevCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons  large  cor_icone left  middle-indicator-text">chevron_left</i></a>
-    </div>
-
-
-<div class="carousel carousel-slider center">
-    <div class="carousel-fixed-item center">
+        <!--final do carrinho-->
+        <div class="row">
+            <div class="col s12 m12 l12">
 
 
 
 
 
+                <div class="carousel carousel-slider center" data-indicators="true">
+                    <div class="carousel-fixed-item center">
 
-    
+                        <a href="Siguiente" class=" moveNextCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons large cor_icone  right middle-indicator-text">chevron_right</i></a>
+                        <a href="Previo" class="movePrevCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons  large  cor_icone left  middle-indicator-text">chevron_left</i></a>
+                    </div>
+
+
+                    <div class="carousel carousel-slider center">
+                        <div class="carousel-fixed-item center">
 
 
 
@@ -456,44 +488,53 @@ SEU  EVENTO!
 
 
 
-<!--inicio fornecedores 1-->
 
-    </div>
-    <div id="orc"></div>
-<div id="orc2"></div>
-<div id="orc3"></div>
-   <template>
+
+
+
+
+
+
+                            <!--inicio fornecedores 1-->
+
+                        </div>
+                        <div id="orc"></div>
+                        <div id="orc2"></div>
+                        <div id="orc3"></div>
+                        <template>
 
 
 
 
 
    </template>
-    <!--servico 1-->
-    <div class="carousel-item  white-text" href="#one!">
-    <div class="parallax-container">
+                        <!--servico 1-->
+                        <div class="carousel-item  white-text" href="#one!">
+                            <div class="parallax-container">
 
-      <div class="parallax"><img class="responsve-img"src="materialize/img/orcamento.png" height="650"></div>
+                                <div class="parallax"><img class="responsve-img" src="materialize/img/orcamento.png" height="650"></div>
 
-<h4 class="solicitar_orcamento">solicitar orçamentos
-<img class="orc_active" src="materialize/img/active_black.png" height="5" width="75">
-</h4>
+                                <h4 class="solicitar_orcamento">solicitar orçamentos
+                                    <img class="orc_active" src="materialize/img/active_black.png" height="5" width="75">
+                                </h4>
 
-<h3 class="saloes_orcamento">SALÕES<a class="waves-effect waves-light btn-carrinho modal-trigger" href="#modal1"></a></h3>
-<h3 class="itens-add" v-if="todos.length != 0"> {{todos.length}}  </h3>
-<br>
+                                <h3 class="saloes_orcamento">ASSESSORIA CERIMONIAL
+                                    <a class="waves-effect waves-light btn-carrinho modal-trigger" href="#modal1"></a>
+                                </h3>
+                                <h3 class="itens-add" v-if="todos.length != 0"> {{todos.length}} </h3>
+                                <br>
 
-</templete>
- <div class="row ">
-    <div class="col s12 l12 m12">
+                                </templete>
+                                <div class="row ">
+                                    <div class="col s12 l12 m12">
 
-<img class="servico1" src="materialize/img/img_cpp.png" height="190" width="350">
-<a class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent" ><i
+                                        <img class="servico1" src="materialize/img/img_delta.png" height="190" width="350">
+                                        <a class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"><i
     class="material-icons ">add</i></a>
-<form v-on:submit.prevent="servico1">
-  <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent "    onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
-</form>
-<!-- <img class="servico3" src="materialize/img/servicos.png" height="190" width="350">
+                                        <form v-on:submit.prevent="servico18">
+                                            <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent " onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
+                                        </form>
+                                        <!-- <img class="servico3" src="materialize/img/servicos.png" height="190" width="350">
   <a class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"><i
       class="material-icons ">add</i></a>
   <form v-on:submit.prevent="servico3">
@@ -505,142 +546,149 @@ ainda não disponivel <img class="servico3" src="materialize/img/servicos.png" h
     <form v-on:submit.prevent="servico3">
       <button type="submit" class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"></button>
     </form>-->
- 
-</div></div>
-<h7 class="arraste">arraste para o lado para ver mais serviços </h7>
-</div>
-</div>
-<!--fim fornecedores 1-->
-  <!--inicio fornecedores 2-->
 
-   
-    
-    <div class="carousel-item  white-text" href="#two!">
-    <div class="parallax-container">
+                                    </div>
+                                </div>
+                                <h7 class="arraste">arraste para o lado para ver mais serviços </h7>
+                            </div>
+                        </div>
+                        <!--fim fornecedores 1-->
+                        <!--inicio fornecedores 2-->
 
-      <div class="parallax"><img class="responsve-img"src="materialize/img/orcamento_laranja.png" height="650"></div>
 
-<h4 class="solicitar_orcamento">solicitar orçamentos
-<img class="orc_active" src="materialize/img/active_black.png" height="5" width="75">
-</h4>
-<h3 class="saloes_orcamento_black">BUFFET<a class="waves-effect waves-light btn-carrinho modal-trigger" href="#modal1"></a></h3>
-<h3 class="itens-add" v-if="todos.length != 0"> {{todos.length}}</h3>
-<br>
 
-  <div class="row ">
-    <div class="col s12 l12 m12">
+                        <div class="carousel-item  white-text" href="#two!">
+                            <div class="parallax-container">
 
-<img  class="servico1" src="materialize/img/img_maestro.png" height="190" width="350">
+                                <div class="parallax"><img class="responsve-img" src="materialize/img/orcamento_laranja.png" height="650"></div>
 
-  <a class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent "><i class="material-icons ">add</i></a>
-  <form v-on:submit.prevent="servico4">
-    <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent "
-      onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
+                                <h4 class="solicitar_orcamento">solicitar orçamentos
+                                    <img class="orc_active" src="materialize/img/active_black.png" height="5" width="75">
+                                </h4>
+                                <h3 class="saloes_orcamento_black">BUFFET
+                                    <a class="waves-effect waves-light btn-carrinho modal-trigger" href="#modal1"></a>
+                                </h3>
+                                <h3 class="itens-add" v-if="todos.length != 0"> {{todos.length}}</h3>
+                                <br>
 
-</button>
-  </form>
-  <div class="hide-on-med-and-down">
-  <img class="servico2"      src="materialize/img/servicos.png" height="190" width="350">
-  <a class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"><i
+                                <div class="row ">
+                                    <div class="col s12 l12 m12">
+
+                                        <img class="servico1" src="materialize/img/img_maestro.png" height="190" width="350">
+
+                                        <a class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent "><i class="material-icons ">add</i></a>
+                                        <form v-on:submit.prevent="servico4">
+                                            <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent " onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
+
+                                            </button>
+                                        </form>
+                                        <div class="hide-on-med-and-down">
+                                            <img class="servico2" src="materialize/img/servicos.png" height="190" width="350">
+                                            <a class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"><i
       class="material-icons ">add</i></a>
-  <form v-on:submit.prevent="servico5">
-  <button type="submit" class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent "
-       onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
-  </form>
-  </div>
-    <img class="servico3" src="materialize/img/gabri_buffe.png" height="190" width="350">
-    <a class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"><i
+                                            <form v-on:submit.prevent="servico5">
+                                                <button type="submit" class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent " onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
+                                            </form>
+                                        </div>
+                                        <img class="servico3" src="materialize/img/gabri_buffe.png" height="190" width="350">
+                                        <a class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"><i
         class="material-icons ">add</i></a>
-    <form v-on:submit.prevent="servico6">
-      <button type="submit" class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"    onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
-    </form>
- 
-</div></div>
-<h7 class="arraste">arraste palado para mais serviços
+                                        <form v-on:submit.prevent="servico6">
+                                            <button type="submit" class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent" onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
+                                        </form>
 
-</h7>
- 
-</div>
+                                    </div>
+                                </div>
+                                <h7 class="arraste">arraste palado para mais serviços
 
-</div>
+                                </h7>
 
-<!--fim fornecedores 2-->
+                            </div>
+
+                        </div>
+
+                        <!--fim fornecedores 2-->
 
 
 
 
-   
- <!--inicio fornecedores 3--> 
 
-    <div class="carousel-item  white-text" href="#three!!">
-       <div class="parallax-container">
+                        <!--inicio fornecedores 3-->
 
-      <div class="parallax"><img class="responsve-img"src="materialize/img/orcamento.png" height="650"></div>
+                        <div class="carousel-item  white-text" href="#three!!">
+                            <div class="parallax-container">
 
-<h4 class="solicitar_orcamento">solicitar orçamentos
-<img class="orc_active" src="materialize/img/active_black.png" height="5" width="75">
-</h4>
-<h3 class="saloes_orcamento">FOTÓGRAFOS<a class="waves-effect waves-light btn-carrinho modal-trigger" href="#modal1"></a></h3>
-<h3 class="itens-add" v-if="todos.length != 0"> {{todos.length}}</h3>
-<br>
+                                <div class="parallax"><img class="responsve-img" src="materialize/img/orcamento.png" height="650"></div>
 
-  <div class="row ">
-    <div class="col s12 l12 m12">
-<img class="servico1" src="materialize/img/img_fotoeventos.png" height="190" width="350">
-<a class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"><i
+                                <h4 class="solicitar_orcamento">solicitar orçamentos
+                                    <img class="orc_active" src="materialize/img/active_black.png" height="5" width="75">
+                                </h4>
+                                <h3 class="saloes_orcamento">FOTÓGRAFOS
+                                    <a class="waves-effect waves-light btn-carrinho modal-trigger" href="#modal1"></a>
+                                </h3>
+                                <h3 class="itens-add" v-if="todos.length != 0"> {{todos.length}}</h3>
+                                <br>
+
+                                <div class="row ">
+                                    <div class="col s12 l12 m12">
+                                        <img class="servico1" src="materialize/img/img_fotoeventos.png" height="190" width="350">
+                                        <a class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"><i
     class="material-icons ">add</i></a>
-<form v-on:submit.prevent="servico7">
-  <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"     onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
-</form>
-  <div class="hide-on-med-and-down">
+                                        <form v-on:submit.prevent="servico7">
+                                            <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent" onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
+                                        </form>
+                                        <div class="hide-on-med-and-down">
 
-<img class="servico2" src="materialize/img/servicos.png" height="190" width="350">
+                                            <img class="servico2" src="materialize/img/servicos.png" height="190" width="350">
 
-<a class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"><i
+                                            <a class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"><i
     class="material-icons ">add</i></a>
-<form v-on:submit.prevent="servico8">
-  <button type="submit" class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"    onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
-</form>
-</div>
-<img class="servico3" src="materialize/img/servicos.png" height="190" width="350">
-<a class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"><i
+                                            <form v-on:submit.prevent="servico8">
+                                                <button type="submit" class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent" onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
+                                            </form>
+                                        </div>
+                                        <img class="servico3" src="materialize/img/servicos.png" height="190" width="350">
+                                        <a class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"><i
     class="material-icons ">add</i></a>
-<form v-on:submit.prevent="servico9">
-  <button type="submit" class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"    onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
-</form>
+                                        <form v-on:submit.prevent="servico9">
+                                            <button type="submit" class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent" onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
+                                        </form>
 
-</div></div>
-<h7 class="arraste">arraste para o lado para ver mais serviços </h7>
-</div>
-</div>
+                                    </div>
+                                </div>
+                                <h7 class="arraste">arraste para o lado para ver mais serviços </h7>
+                            </div>
+                        </div>
 
 
-<!--fim fornecedores 3-->
-<!--inicio fornecedores 4-->
+                        <!--fim fornecedores 3-->
+                        <!--inicio fornecedores 4-->
 
-    
-    
-    <div class="carousel-item  white-text" href="#four!">
-    <div class="parallax-container">
 
-      <div class="parallax"><img class="responsve-img"src="materialize/img/orcamento_laranja.png" height="650"></div>
 
-<h4 class="solicitar_orcamento">solicitar orçamentos
-<img class="orc_active" src="materialize/img/active_black.png" height="5" width="75">
-</h4>
-<h3 class="saloes_orcamento_black">SOM & LUZ<a class="waves-effect waves-light btn-carrinho modal-trigger" href="#modal1"></a></h3>
-<h3 class="itens-add" v-if="todos.length != 0"> {{todos.length}}</h3>
-<br>
+                        <div class="carousel-item  white-text" href="#four!">
+                            <div class="parallax-container">
 
-  <div class="row ">
-    <div class="col s12 l12 m12">
-<img class="servico1" src="materialize/img/img_delta.png" height="190" width="350">
-<a class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"><i
+                                <div class="parallax"><img class="responsve-img" src="materialize/img/orcamento_laranja.png" height="650"></div>
+
+                                <h4 class="solicitar_orcamento">solicitar orçamentos
+                                    <img class="orc_active" src="materialize/img/active_black.png" height="5" width="75">
+                                </h4>
+                                <h3 class="saloes_orcamento_black">SOM & LUZ
+                                    <a class="waves-effect waves-light btn-carrinho modal-trigger" href="#modal1"></a>
+                                </h3>
+                                <h3 class="itens-add" v-if="todos.length != 0"> {{todos.length}}</h3>
+                                <br>
+
+                                <div class="row ">
+                                    <div class="col s12 l12 m12">
+                                        <img class="servico1" src="materialize/img/img_delta.png" height="190" width="350">
+                                        <a class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"><i
     class="material-icons ">add</i></a>
-<form v-on:submit.prevent="servico10">
-  <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"     onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
-</form>
-<!--
+                                        <form v-on:submit.prevent="servico10">
+                                            <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent" onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
+                                        </form>
+                                        <!--
     <div class="hide-on-med-and-down">
 
   
@@ -658,84 +706,88 @@ ainda não disponivel <img class="servico3" src="materialize/img/servicos.png" h
   <button type="submit" class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"  id="adicionado"></button>
 </form>
 -->
-</div>
-</div>
-<h7 class="arraste">arraste para o lado para ver mais serviços 
-</h7>
-</div>
-</div>
+                                    </div>
+                                </div>
+                                <h7 class="arraste">arraste para o lado para ver mais serviços
+                                </h7>
+                            </div>
+                        </div>
 
-<!--fim fornecedores 4-->
-<!--inicio fornecedores 5--> 
+                        <!--fim fornecedores 4-->
+                        <!--inicio fornecedores 5-->
 
-    <div class="carousel-item  white-text" href="#three!!">
-       <div class="parallax-container">
+                        <div class="carousel-item  white-text" href="#three!!">
+                            <div class="parallax-container">
 
-      <div class="parallax"><img class="responsve-img"src="materialize/img/orcamento.png" height="650"></div>
+                                <div class="parallax"><img class="responsve-img" src="materialize/img/orcamento.png" height="650"></div>
 
-<h4 class="solicitar_orcamento">solicitar orçamentos
-<img class="orc_active" src="materialize/img/active_black.png" height="5" width="75">
-</h4>
-<h3 class="saloes_orcamento">DECORAÇÃO<a class="waves-effect waves-light btn-carrinho modal-trigger" href="#modal1"></a></h3>
-<h3 class="itens-add" v-if="todos.length != 0"> {{todos.length}} </h3>
-<br>
+                                <h4 class="solicitar_orcamento">solicitar orçamentos
+                                    <img class="orc_active" src="materialize/img/active_black.png" height="5" width="75">
+                                </h4>
+                                <h3 class="saloes_orcamento">DECORAÇÃO
+                                    <a class="waves-effect waves-light btn-carrinho modal-trigger" href="#modal1"></a>
+                                </h3>
+                                <h3 class="itens-add" v-if="todos.length != 0"> {{todos.length}} </h3>
+                                <br>
 
-  <div class="row ">
-    <div class="col s12 l12 m12">
-<img class="servico1" src="materialize/img/servicos.png" height="190" width="350">
-<a class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"><i
+                                <div class="row ">
+                                    <div class="col s12 l12 m12">
+                                        <img class="servico1" src="materialize/img/servicos.png" height="190" width="350">
+                                        <a class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"><i
     class="material-icons ">add</i></a>
-<form v-on:submit.prevent="servico13">
-  <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"     onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
-</form>
-  <div class="hide-on-med-and-down">
+                                        <form v-on:submit.prevent="servico13">
+                                            <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent" onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
+                                        </form>
+                                        <div class="hide-on-med-and-down">
 
-<img class="servico2" src="materialize/img/servicos.png" height="190" width="350">
-<a class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"><i
+                                            <img class="servico2" src="materialize/img/servicos.png" height="190" width="350">
+                                            <a class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"><i
     class="material-icons ">add</i></a>
-<form v-on:submit.prevent="servico14">
-  <button type="submit" class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent"    onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
-</form>
+                                            <form v-on:submit.prevent="servico14">
+                                                <button type="submit" class="add_servico2 btn-floating btn-small waves-effect waves-light N/A transparent" onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
+                                            </form>
 
-</div>
-<img class="servico3" src="materialize/img/servicos.png" height="190" width="350">
-<a class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"><i
+                                        </div>
+                                        <img class="servico3" src="materialize/img/servicos.png" height="190" width="350">
+                                        <a class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"><i
     class="material-icons ">add</i></a>
-<form v-on:submit.prevent="servico15">
-  <button type="submit" class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"    onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
-</form>
+                                        <form v-on:submit.prevent="servico15">
+                                            <button type="submit" class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent" onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
+                                        </form>
 
-</div>
-</div>
-<h7 class="arraste">arraste para o lado para ver mais serviços
-</h7>
+                                    </div>
+                                </div>
+                                <h7 class="arraste">arraste para o lado para ver mais serviços
+                                </h7>
 
 
-<!--inicio fornecedores 6-->
+                                <!--inicio fornecedores 6-->
 
-    </div>
-    </div>
-    <div class="carousel-item  white-text" href="#four!">
-    <div class="parallax-container">
+                            </div>
+                        </div>
+                        <div class="carousel-item  white-text" href="#four!">
+                            <div class="parallax-container">
 
-      <div class="parallax"><img class="responsve-img"src="materialize/img/orcamento_laranja.png" height="650"></div>
+                                <div class="parallax"><img class="responsve-img" src="materialize/img/orcamento_laranja.png" height="650"></div>
 
-<h4 class="solicitar_orcamento">solicitar orçamentos
-<img class="orc_active" src="materialize/img/active_black.png" height="5" width="75">
-</h4>
-<h3 class="saloes_orcamento_black">SEGURANÇA<a class="waves-effect waves-light btn-carrinho modal-trigger" href="#modal1"></a></h3>
-<h3 class="itens-add" v-if="todos.length != 0"> {{todos.length}}</h3>
-<br>
+                                <h4 class="solicitar_orcamento">solicitar orçamentos
+                                    <img class="orc_active" src="materialize/img/active_black.png" height="5" width="75">
+                                </h4>
+                                <h3 class="saloes_orcamento_black">SEGURANÇA
+                                    <a class="waves-effect waves-light btn-carrinho modal-trigger" href="#modal1"></a>
+                                </h3>
+                                <h3 class="itens-add" v-if="todos.length != 0"> {{todos.length}}</h3>
+                                <br>
 
-  <div class="row ">
-    <div class="col s12 l12 m12">
-<img  class="servico1" src="materialize/img/servicos.png" height="190" width="350">
-<a class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"><i
+                                <div class="row ">
+                                    <div class="col s12 l12 m12">
+                                        <img class="servico1" src="materialize/img/servicos.png" height="190" width="350">
+                                        <a class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"><i
     class="material-icons ">add</i></a>
-<form v-on:submit.prevent="servico17">
-  <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"    onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
-</form>
-<!--
+                                        <form v-on:submit.prevent="servico17">
+                                            <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent" onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
+                                        </form>
+                                        <!--
     <div class="hide-on-med-and-down">
 
   <img class="servico2" src="materialize/img/servicos.png" height="190" width="350">
@@ -752,38 +804,40 @@ ainda não disponivel <img class="servico3" src="materialize/img/servicos.png" h
   <button type="submit" class="add_servico3 btn-floating btn-small waves-effect waves-light N/A transparent"  id="adicionado"></button>
 </form>
 -->
-</div>
-</div>
-<h7 class="arraste">arraste para o lado para ver mais serviços 
-</h7>
-</div>
+                                    </div>
+                                </div>
+                                <h7 class="arraste">arraste para o lado para ver mais serviços
+                                </h7>
+                            </div>
 
-    </div>
+                        </div>
 
-<!--fim fornecedores 6-->
-<!--inicio fornecedores 7--> 
+                        <!--fim fornecedores 6-->
+                        <!--inicio fornecedores 7-->
 
-    <div class="carousel-item  white-text" href="#three!!">
-       <div class="parallax-container">
+                        <div class="carousel-item  white-text" href="#three!!">
+                            <div class="parallax-container">
 
-      <div class="parallax"><img class="responsve-img"src="materialize/img/orcamento.png" height="650"></div>
+                                <div class="parallax"><img class="responsve-img" src="materialize/img/orcamento.png" height="650"></div>
 
-<h4 class="solicitar_orcamento">solicitar orçamentos
-<img class="orc_active" src="materialize/img/active_black.png" height="5" width="75">
-</h4>
-<h3 class="saloes_orcamento">ASSESSORIA CERIMONIAL<a class="waves-effect waves-light btn-carrinho modal-trigger" href="#modal1"></a></h3>
-<h3 class="itens-add" v-if="todos.length != 0"> {{todos.length}}</h3>
-<br>
+                                <h4 class="solicitar_orcamento">solicitar orçamentos
+                                    <img class="orc_active" src="materialize/img/active_black.png" height="5" width="75">
+                                </h4>
+                                <h3 class="saloes_orcamento">SALÕES
+                                    <a class="waves-effect waves-light btn-carrinho modal-trigger" href="#modal1"></a>
+                                </h3>
+                                <h3 class="itens-add" v-if="todos.length != 0"> {{todos.length}}</h3>
+                                <br>
 
-  <div class="row ">
-    <div class="col s12 l12 m12">
-<img class="servico1" src="materialize/img/servicos.png" height="190" width="350">
-<a class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"><i
+                                <div class="row ">
+                                    <div class="col s12 l12 m12">
+                                        <img class="servico1" src="materialize/img/img_cpp.png" height="190" width="350">
+                                        <a class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"><i
     class="material-icons ">add</i></a>
-<form v-on:submit.prevent="servico18">
-  <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent"    onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
-</form>
-<!--
+                                        <form v-on:submit.prevent="servico1">
+                                            <button type="submit" class="add_servico btn-floating btn-small waves-effect waves-light N/A transparent" onClick="window.Materialize.toast('SERVIÇO ADICIONADO COM SUCESSO!', 4000)"></button>
+                                        </form>
+                                        <!--
     <div class="hide-on-med-and-down">
 
   <img class="servico2" src="materialize/img/servicos.png" height="190" width="350">
@@ -801,12 +855,254 @@ ainda não disponivel <img class="servico3" src="materialize/img/servicos.png" h
 </form>
 -->
 
-<h7 class="arraste">arraste para o lado para ver mais serviços 
-</h7>
-</div>
-</div>
-</div></div>
-<!--fim fornecedores 7-->
+                                        <h7 class="arraste">arraste para o lado para ver mais serviços
+                                        </h7>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--fim fornecedores 7-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+
+
+                    <!--inicio fornecedores finalizar-->
+
+                    <div class="carousel-item  white-text" href="#three!!">
+                        <div class="parallax-container">
+
+                            <div class="parallax"><img class="responsve-img" src="materialize/img/finaliza.png" height="750">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                <!--final inputs finalizar-->
+
+
+
+
+
+
+
+
+
+                            </div>
+
+
+
+
+
+
+
+
+                            <!--ondas-->
+                            <img class="ondas_fim" src="materialize/img/ONDAS_ORANGE.png" height="38">
+                            <!--xxx-->
+                            <img class="xxx_fim" src="materialize/img/xxx.png" height="45">
+
+                            <!--voltar para o inicio-->
+                            <a href="Siguiente" class="  middle-indicator-text waves-effect waves-light content-indicator">
+
+                            </a>
+                            <!--voltar ao inicio-->
+                            <a href="Siguiente" class="inicioCarousel">Voltar ao inicio</a>
+                            <!--gaper.net-->
+                            <h5 class="gapernet">gaper
+                                <h5 class="net">.net</h5>
+                            </h5>
+                            <h7 class="direitos">2019 - todos os direitos reservados.</h7>
+                            <!--redes sociais
+                            <a href="https://www.instagram.com/gaper.eventos"><img class="instagran" src="materialize/img/insta.png" height="35">
+                            </a>
+                            <a href="http://facebook.com/gaper.net"><img class="facebook" src="materialize/img/facebook.png" height="35">
+                            </a>
+
+
+                            <a href="http://facebook.com/gaper.net"><img class="whats" src="materialize/img/whats.png" height="35">
+                            </a>
+                            <h7 class="email">contato@gaper.net</h7>-->
+
+
+
+
+
+
+
+
+
+
+
+                            <img class="logo_finalizar" src="materialize/img/simbolo.png" height="75">
+                            <h4 class="finalizar_orcamento">solicitar orçamentos
+                                <img class="finaliza_active" src="materialize/img/active.png" height="5" width="75"></h4>
+                            <br><br><br><br><br><br><br>
+                            <form method="POST" action="finaliza.php">
+                                <div class="formulario">
+
+                                    <!--nome-->
+                                    <div class="row">
+
+                                        <div class="row">
+                                            <div class="input-field col s5 pull-s1">
+                                                <input id="input_text" type="text" data-length="10" name="nome">
+                                                <label for="input_text">Nome</label>
+                                            </div>
+
+
+                                            <div class="input-field col s4">
+
+                                                <select>
+  
+      <option value="aniversario">Aniversário</option>
+      <option value="casamento">Casamento</option>
+      <option value="formatura">Formatura</option>
+      <option value="xv">15 anos</option>
+       <option value="empresarial">Evento empresarial</option>
+    </select>
+                                                <label>Tipo de Evento</label>
+
+
+
+
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+                                    </div>
+
+
+                                    <!--email-->
+
+                                    <div class="row">
+                                        <div class="input-field col s5  pull-s1">
+                                            <input id="input_text" type="text" data-length="10" name="email">
+                                            <label for="input_text">Email</label>
+                                        </div>
+                                        <!--data-->
+                                        <div class="input-field col s2">
+                                            <input type="date" class="datepicker">
+                                        </div>
+
+
+
+
+                                    </div>
+                                    <!--whats-->
+
+                                    <div class="row">
+                                        <div class="input-field col s5  pull-s1">
+                                            <input id="input_text" type="text" data-length="10" name="whats">
+                                            <label for="input_text">Whatsappp</label>
+                                        </div>
+                                        <!--convidados-->
+                                        <div class="input-field col s5 ">
+                                            <input id="input_text" type="text" data-length="10" name="convidados">
+                                            <label for="input_text">Numero de Convidados</label>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+                                    <div class="input-field col s8 pull-s1">
+                                        <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                        <label for="textarea1">Observação</label>
+                                    </div>
+
+
+
+                                    <button type="submit" class="btn-finaliza">Enviar</button>
+
+
+                            </form>
+                            </div>
+
+
+                            <img class="carrinho_finalizar" src="materialize/img/carrinho.png" height="45">
+                            <!--fim fornecedores 7-->
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+            </form>
+
+        </div>
+    </div>
+
+    <!--versao mobile-->
+
+
+
+    <!---final da mobile-->
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -825,435 +1121,209 @@ ainda não disponivel <img class="servico3" src="materialize/img/servicos.png" h
 
 
     </div>
-
-
-<!--inicio fornecedores finalizar--> 
-
-    <div class="carousel-item  white-text" href="#three!!">
-       <div class="parallax-container">
-
-      <div class="parallax"><img class="responsve-img"src="materialize/img/finaliza.png" height="750">
-       
-
-
-
-
-
-
-
-
-       
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- <!--final inputs finalizar-->
-
-
-        
-
-
-
-
-
-
-      </div>
-
-
-
-
-
-
-
-
-<!--ondas-->
-<img class="ondas_fim"src="materialize/img/ONDAS_ORANGE.png" height="38">
-<!--xxx-->
-<img class="xxx_fim"src="materialize/img/xxx.png" height="45">
-
-<!--voltar para o inicio-->
-  <a href="Siguiente" class="  middle-indicator-text waves-effect waves-light content-indicator">
-
-</a>
-<!--voltar ao inicio-->
- <a href="Siguiente" class="inicioCarousel">Voltar ao inicio</a>
-<!--gaper.net-->
-<h5 class="gapernet">gaper<h5 class="net">.net</h5></h5>
-<h7 class="direitos">2019 - todos os direitos reservados.</h7>
-<!--redes sociais-->
-<a href="https://www.instagram.com/gaper.eventos"><img class="instagran"src="materialize/img/insta.png" height="35">
-</a>
-<a href="http://facebook.com/gaper.net"><img class="facebook"src="materialize/img/facebook.png" height="35">
-</a>
-
-
-<a href="http://facebook.com/gaper.net"><img class="whats"src="materialize/img/whats.png" height="35">
-</a>
-<h7 class="email">contato@gaper.net</h7>
-
-
-
-
-
-
-
-
-
-
-
-<img class="logo_finalizar"src="materialize/img/simbolo.png" height="75">
-<h4 class="finalizar_orcamento">solicitar orçamentos
-<img class="finaliza_active" src="materialize/img/active.png" height="5" width="75"></h4>
-<br><br><br><br><br><br><br>
-<form method="POST" action="finaliza.php">
-<div class="formulario">
-
-  <!--nome-->
-  <div class="row">
-      
+    <!--sobre nós-->
+    <div class="sobrenos">
         <div class="row">
-          <div class="input-field col s5 pull-s1">
-            <input id="input_text" type="text" data-length="10" name="nome">
-            <label for="input_text">Nome</label>
-          </div>
+            <div class="col s12 m12 l12">
+                <div class="sobrenos">
+                    <div class="parallax-container">
+
+                        <div class="parallax"><img class="responsve-img" src="materialize/img/bg_sobrenos.png" height="750" width="140%">
 
 
-<div class="input-field col s4">
-     
-    <select>
-  
-      <option value="aniversario">Aniversário</option>
-      <option value="casamento">Casamento</option>
-      <option value="formatura">Formatura</option>
-      <option value="xv">15 anos</option>
-       <option value="empresarial">Evento empresarial</option>
-    </select>
-    <label>Tipo de Evento</label>
+                        </div>
 
 
+                        <h6 class="sobre_h6">Sobre nós
+                            <img class="active_sobrenos" src="materialize/img/active_branco.png" height="5" width="53%">
+
+                        </h6>
+                        <div id="sobrenos"></div>
+                        <div class="row">
+                            <div class="texto_sobrenos col s12 m12 l12 ">
+                                <h5 class="tex_sobre">Gaper é uma plataforma que veio para facilitar o contato com os fornecedores de serviços para eventos, são diversos<br> fornecedores centralizados em um só lugar, aonde você tenha a confortável tarefa de ver qual a melhor
+                                    opção para seu<br> evento futuro.<br><br> Viemos para revolucionar o mercado de eventos, levando até você todos os fornecedores para lhe entregarem um<br> orçamento e tornar a organização da sua festa de aniversário,
+                                    formatura, casamento, 15 anos, festa infantil ou<br> empresarial, fácil e descomplicada.<br> Nosso site é gratuito e você pode pedir quantos orçamentos desejar sem se preocupar com pagamento algum!<br> É simples, é
+                                    rápido e aqui você tem o que precisa para que sua festa seja a melhor.</h5>
 
 
-          </div>
-</div>
+                                <a href="#orc3" class="scroll">
+                                    <h5 class="solicite_sobrenos">SOLICITE UM ORÇAMENTO!
 
+                                        <img class="sublinhado_sobrenos" src="materialize/img/sobrenos_sublinhado.png" height="15" width="105%"></a>
+                                <div id="contato"></div>
 
-
-
-
-
-
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-   
+    </div>
+    <!--contato--><br><br>
 
-  <!--email-->
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <h6 class="contato_h6">Contato
 
- <div class="row">
-          <div class="input-field col s5  pull-s1">
-            <input id="input_text" type="text" data-length="10" name="email">
-            <label for="input_text">Email</label>
-          </div>
-<!--data-->
-<div class="input-field col s2">
-  <input type="date" class="datepicker">
-  </div>
+            </h6>
+            <br><br><br>
 
+            <div class="fomrulario">
+                <form method="POST" action="contato.php">
+                    <div class="row">
 
+                        <div class="input-field col s5 push-s1 ">
+                            <input id="input_text" type="text" data-length="10" name="nome">
+                            <label for="input_text">Nome</label>
 
+                        </div>
 
-        </div>
- <!--whats-->
+                        <div class="col s5 push-s2">
+                            <div class="input-field col s8 ">
+                                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                <label for="textarea1">Observação</label>
+                            </div>
 
- <div class="row">
-          <div class="input-field col s5  pull-s1">
-            <input id="input_text" type="text" data-length="10" name="whats">
-            <label for="input_text">Whatsappp</label>
-          </div>
-          <!--convidados-->
-  <div class="input-field col s5 ">
-            <input id="input_text" type="text" data-length="10" name="convidados">
-            <label for="input_text">Convidados</label>
-          </div>
-        </div>
 
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s5 push-s1 ">
+                                <input id="input_text" type="text" data-length="10" name="email">
+                                <label for="input_text">Email</label>
 
+                            </div>
 
+                        </div>
 
+                        <div class="row">
+                            <div class="input-field col s5 push-s1 ">
+                                <input id="input_text" type="text" data-length="10" name="whats">
+                                <label for="input_text">Whatsapp</label>
 
-  
-     
-        <div class="input-field col s8 pull-s1">
-          <textarea id="textarea1" class="materialize-textarea"></textarea>
-          <label for="textarea1">Observação</label>
-        </div>
-   
-   
+                            </div>
 
-<button type="submit" class="btn-finaliza">Enviar</button>
+                            <button class="enviar_contato" type="submit">Enviar</button>
 
+                </form>
+                <h6 class="contato_msg_final">se você preferir um contato mais próximo, venha conhecer nossa empresa!<br>
 
-      </form></div>
+                    <h7 class="endereco_rua">R. General Argolo, 567 - Pelotas/RS</h7>
 
+                </h6>
 
-<img class="carrinho_finalizar"src="materialize/img/carrinho.png" height="45">
-<!--fim fornecedores 7-->
-  </div>
+                </div>
 
-       </div> 
 
 
- </div>
 
+                </div>
 
 
+            </div>
 
-</div>
-</form>
+            <!--faça parte-->
+            <div class="row">
+                <div class="col s12 m12 l12 ">
+                    <div class="parallax-container">
 
-</div>
-</div>
+                        <div class="parallax"><img class="responsve-img" src="materialize/img/bg_trabalheconosco.png" height="750" width="140%">
 
-<!--versao mobile-->
 
 
 
-<!---final da mobile-->
 
+                        </div>
+                        <h5 class="captura">Quer receber pedidos de orçamentos e impulsionar<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            o seu negócio?<br>
+                            <h3 class="facaparte">
+                                <a href="http://www.orcamentosgaper.net" target="blank"><img class="facapsarte" src="materialize/img/facaparte.png" height="55" width="60%"></a>
 
 
 
+                            </h3>
+                        </h5>
 
 
+                        <br>
 
 
 
 
 
 
+                    </div>
 
 
+                </div>
+            </div>
 
 
+            <!--footer-->
 
+            <div class="row">
+                <div class="col s12 m12 l12 ">
+                    <div class="parallax-container footer">
 
+                        <div class="parallax"><img class="r-img" src="materialize/img/footer.png" width="100%"></div>
 
 
 
+                        <img class="laranja_footer" src="materialize/img/ONDAS_ORANGE.png" height="55">
 
+                        <h5 class="gapernet_footer">gaper
+                            <h5 class="net">.net</h5>
+                        </h5>
+                        <h7 class="direitos_footer">2019 - todos os direitos reservados.</h7>
+                        <!--redes sociais-->
+                        <a href="https://www.instagram.com/gaper.eventos"><img class="instagran_footer" src="materialize/img/insta.png" height="25">
+                        </a>
+                        <a href="http://facebook.com/gaper.net"><img class="facebook_footer" src="materialize/img/facebook.png" height="25">
+                        </a>
 
 
+                        <a href="http://facebook.com/gaper.net"><img class="whats_footer" src="materialize/img/whats.png" height="25">
 
+                        </a>
+                        <h7 class="email_footer">contato@gaper.net</h7>
+                        <img class="xxx_footer" src="materialize/img/xxx.png" height="45">
 
 
 
 
+                    </div>
 
-</div>
-<!--sobre nós-->
-<div class="sobrenos">
-<div class="row">
-  <div class="col s12 m12 l12">
-<div class="sobrenos">
-  <div class="parallax-container">
 
-      <div class="parallax"><img class="responsve-img"src="materialize/img/bg_sobrenos.png" height="750" width="140%">
-
-
-</div>
-
-
-<h6 class="sobre_h6">Sobre nós
-   <img class="active_sobrenos" src="materialize/img/active_branco.png" height="5" width="53%">
-
-</h6>
-<div id="sobrenos"></div>
-<div class="row">
-  <div class="texto_sobrenos col s12 m12 l12 ">
-<h5 class="tex_sobre">Gaper é uma plataforma que veio para facilitar o contato com os fornecedores de serviços para eventos, são diversos<br> fornecedores centralizados em um só lugar, aonde você tenha a confortável tarefa de ver qual a melhor opção para seu<br> evento futuro.<br><br>
-
-Viemos para revolucionar o mercado de eventos, levando até você todos os fornecedores para lhe entregarem um<br> orçamento e tornar a organização da sua festa de aniversário, formatura, casamento, 15 anos, festa infantil ou<br> empresarial, fácil e descomplicada.<br>
-
-Nosso site é gratuito e você pode pedir quantos orçamentos desejar sem se preocupar com pagamento algum!<br>
-
-É simples, é rápido e aqui você tem o que precisa para que sua festa seja a melhor.</h5>
-
-
-<a href="#orc3" class="scroll"><h5 class="solicite_sobrenos">SOLICITE UM ORÇAMENTO!
-
-   <img class="sublinhado_sobrenos" src="materialize/img/sobrenos_sublinhado.png" height="15" width="105%"></a>
-  <div id="contato"></div>
-
-</h5>
-</div></div></div></div></div></div></div>
-<!--contato--><br><br>
-
-<div class="row">
-  <div class="col s12 m12 l12">
-<h6 class="contato_h6">Contato
-
-</h6>
-<br><br><br>
-
-<div class="fomrulario">
-  <form method="POST" action="contato.php">
-<div class="row">
-
-          <div class="input-field col s5 push-s1 ">
-            <input id="input_text" type="text" data-length="10" name="nome">
-            <label for="input_text">Nome</label>
-
-          </div>
-
-  <div class="col s5 push-s2">
-     <div class="input-field col s8 ">
-          <textarea id="textarea1" class="materialize-textarea"></textarea>
-          <label for="textarea1">Observação</label>
-        </div>
-
-    
-</div>
-<div class="row">
-          <div class="input-field col s5 push-s1 ">
-            <input id="input_text" type="text" data-length="10" name="email">
-            <label for="input_text">Email</label>
-
-          </div>
-
-</div>
- 
-<div class="row">
-          <div class="input-field col s5 push-s1 ">
-            <input id="input_text" type="text" data-length="10" name="whats">
-            <label for="input_text">Whatsapp</label>
-
-          </div>
-
-<button   class="enviar_contato" type="submit">Enviar</button>
-
-</form>
-<h6 class="contato_msg_final">se você preferir um contato mais próximo, venha conhecer nossa empresa!<br>
-
-<h7 class="endereco_rua">R. General Argolo, 567 - Pelotas/RS</h7>
-
-</h6>
-
-</div>
-
- 
-   
-
-</div>
-
-
-      </div>
-
-<!--faça parte-->
-<div class="row">
-  <div class="col s12 m12 l12 ">
-<div class="parallax-container">
-
-      <div class="parallax"><img class="responsve-img"src="materialize/img/bg_trabalheconosco.png" height="750" width="140%">
-
-
-
-
-
-      </div>
-     <h5 class="captura">Quer receber pedidos de orçamentos e impulsionar<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-o seu negócio?<br><h3 class="facaparte">
-    <a href="http://www.orcamentosgaper.net" target="blank"><img  class="facapsarte" src="materialize/img/facaparte.png" height="55" width="60%"></a>
-
-
-
-</h3></h5>
-
-
-<br>
-
-
-
-
-
-
-  </div>
-
-
-</div>
-</div>
-
-
-<!--footer-->
-
- <div class="row">
-  <div class="col s12 m12 l12 ">
-<div class="parallax-container footer">
-
-      <div class="parallax"><img class="r-img"src="materialize/img/footer.png"  width="100%"></div>
-
-
-
-<img class="laranja_footer"src="materialize/img/ONDAS_ORANGE.png" height="55">
-
-<h5 class="gapernet_footer">gaper<h5 class="net">.net</h5></h5>
-<h7 class="direitos_footer">2019 - todos os direitos reservados.</h7>
-<!--redes sociais-->
-<a href="https://www.instagram.com/gaper.eventos"><img class="instagran_footer"src="materialize/img/insta.png" height="25">
-</a>
-<a href="http://facebook.com/gaper.net"><img class="facebook_footer"src="materialize/img/facebook.png" height="25">
-</a>
-
-
-<a href="http://facebook.com/gaper.net"><img class="whats_footer"src="materialize/img/whats.png" height="25">
-</a>
-<h7 class="email_footer">contato@gaper.net</h7>
-<img class="xxx_footer"src="materialize/img/xxx.png" height="45">
-
-
-
-
-  </div>
-
-
-</div>
-</div>
-<!--modal-->
+                </div>
+            </div>
+            <!--modal-->
 
 </body>
 
 
 <!---jquery-->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
- <!--materialize-->
- <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
-  <!--vue-->
-  <script src="https://unpkg.com/vue/dist/vue.js"></script>
-      <!--arquivos configuração vue-->
-  <script src="materialize/js/script-vue-carrinho.js"></script>
-  <!--arquivos js materialize-->
-  <script src="materialize/js/materialize-script-js.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var elems = document.querySelectorAll('.modal');
-    var instances = M.Modal.init(elems, options);
-  });
+<!--materialize-->
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+<!--vue-->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!--arquivos configuração vue-->
+<script src="materialize/js/script-vue-carrinho.js"></script>
+<!--arquivos js materialize-->
+<script src="materialize/js/materialize-script-js.js"></script>
 
-  // Or with jQuery
 
-  $(document).ready(function () {
-    $('.modal').modal();
-  });</script>
 </html>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.modal');
+        var instances = M.Modal.init(elems, options);
+    });
+
+    // Or with jQuery
+
+    $(document).ready(function() {
+        $('.modal').modal();
+    });
+</script>
