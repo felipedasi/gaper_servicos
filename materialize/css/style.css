@@ -1,658 +1,619 @@
 <style>
+
 /*header*/
 
-.card-image {
-    background-color: #666;
+.card-image{
+
+      background-color:#666;
     border-radius: 10px;
 }
-
-.circulo_branco {
-    position: absolute;
-    left: 10%;
-    top: 30%;
+.circulo_branco
+{
+  	position: absolute;
+  	left:10%;
+	top:30%;
 }
 
-.ondasblack {
-    position: absolute;
-    left: -70px;
-    transform: translateX(-10%);
-    top: 75%;
+.ondasblack
+{
+  position: absolute;
+left:-70px;
+transform: translateX(-10%);
+top:75%;
 }
 
-.responsiimg {
-    position: absolute;
-    top: -2%;
-    width: 20%;
-    height: auto;
+.responsiimg{
+  position: absolute;
+  top:-2%;
+  width: 20%;
+  height: auto;
 }
 
-.comeca {
-    float: left;
-    line-height: 8%;
+.comeca{
+  float:left;
+  line-height: 8%;
+
+}
+.seta
+{
+  position:absolute;
+  top:73%;
+  left: 103%;
+  width: 20%;
+  height: auto;
 }
 
-.seta {
-    position: absolute;
-    top: 73%;
-    left: 103%;
-    width: 20%;
-    height: auto;
+@media only screen and (max-width: 500px){
+	.seta
+{
+  position:absolute;
+  display: none;
 }
 
-@media only screen and (max-width: 500px) {
-    .seta {
-        position: absolute;
-        display: none;
-    }
-    .ondalaranja {
-        position: absolute;
-        display: none;
-    }
-    .carrinho {
-        position: absolute;
-        right: 8%;
-        top: 3%;
-        width: 100px;
-        height: auto;
-    }
-    .laranja {
-        display: none;
-        position: absolute;
-    }
-    .circulo_laranja {
-        position: absolute;
-        display: none;
-    }
+.ondalaranja
+{
+	position:absolute;
+	display: none;
 }
 
-.ondalaranja {
-    position: absolute;
-    left: 210%;
-    top: 1%;
+.carrinho
+{
+  position: absolute;
+  right: 8%;
+  top:3%;
+  width: 100px;
+  height: auto;
 }
 
-.carrinho {
-    position: absolute;
-    right: 8%;
-    top: 3%;
-    width: 30px;
-    height: auto;
+.laranja
+{
+	display: none;
+  position: absolute;
+
 }
 
-.laranja {
-    width: 200px;
-    height: auto;
-    position: absolute;
-    right: -70px;
-    top: 20%;
+.circulo_laranja
+{
+  position: absolute;
+  display: none;
 }
 
-.barra_laranja {
-    position: absolute;
-    right: 420px;
-    top: 38.5%;
 }
 
-.texo_barra {
-    color: #FFF;
-    font-family: Roboto, LightItalic;
-    font-size: 16px;
-    position: absolute;
-    right: 265px;
-    top: 40%;
+.ondalaranja
+{
+  position:absolute;
+left:210%;
+top:1%;
 }
 
-.solicita {
-    color: #FFF;
-    position: absolute;
-    right: 14%;
-    top: 78%;
+.carrinho
+{
+  position: absolute;
+  right: 8%;
+  top:3%;
+  width: 30px;
+  height: auto;
+}
+.laranja
+{
+	width: 200px;
+	height: auto;
+  position: absolute;
+right: -70px;
+top:20%;
+}
+.barra_laranja{
+  position:absolute;
+  right: 420px;
+  top:38.5%;
+}
+.texo_barra{
+  color:#FFF;
+  font-family: Roboto, LightItalic;
+  font-size: 16px;
+  position: absolute;
+  right: 265px;
+  top:40%;
+}
+.solicita{
+  color:#FFF;
+  position: absolute;
+  right: 14%;
+  top:78%;
+}
+.active{
+position: absolute;
+right: 78%;
+top:35px;
 }
 
-.active {
-    position: absolute;
-    right: 78%;
-    top: 35px;
+.circulo_laranja
+{
+  position: absolute;
+  right: 60%;
+  top:110%;
 }
+.menu_mobile_ul{
+  font-family: Roboto;
+  color:#FFF;
 
-.circulo_laranja {
-    position: absolute;
-    right: 60%;
-    top: 110%;
 }
-
-.menu_mobile_ul {
-    font-family: Roboto;
-    color: #FFF;
-}
-
-
 /*menu mobile*/
+.li_mobile{
+margin-top: 35%;
 
-.li_mobile {
-    margin-top: 35%;
 }
 
-.logo_mobile {
-    position: absolute;
-    top: 0;
-    left: 3%;
+.logo_mobile{
+  position: absolute;
+  top:0;
+  left: 3%;
 }
 
-.barra_menu {
-    position: absolute;
-    top: 100px;
-    left: .5%;
+.barra_menu{
+  position: absolute;
+  top:100px;
+  left: .5%;
 }
 
-.linhamobile {
-    position: absolute;
-    top: 310px;
-    left: 22%;
-    opacity: .5;
+.linhamobile{
+  position: absolute;
+  top:310px;
+  left: 22%;
+  opacity: .5;
 }
 
-.entre_mobile {
-    position: absolute;
-    font-weight: 300;
-    left: 10%;
-    top: 350px;
+.entre_mobile{
+  position: absolute;
+  font-weight: 300;
+  left: 10%;
+  top: 350px;
 }
-
-.contato_mobile {
-    position: absolute;
-    font-weight: 300;
-    left: 26%;
-    top: 390px;
+.contato_mobile
+{
+  position: absolute;
+  font-weight: 300;
+  left: 26%;
+  top: 390px;
 }
-
-.preve_mobile {
-    position: absolute;
-    right: 5%;
-    top: 25px;
+.preve_mobile{
+  position: absolute;
+  right: 5%;
+  top:25px;
 }
+.cor_icone{
+  color:#D6522E;
 
-.cor_icone {
-    color: #D6522E;
 }
-
-.button-collapse {
-    right: 1%;
+.button-collapse{
+  right: 1%;
 }
-
-.active_destaque {
-    position: absolute;
-    left: 1%;
-    top: 120%;
-    width: 50px;
-    height: auto;
+.active_destaque
+{
+position: absolute;
+left: 1%;
+top:120%;
+width: 50px;
+height: auto;
 }
-
-.active_ {
-    position: absolute;
-    top: 90%;
+.active_{
+  position: absolute;
+top:90%;
 }
-
-.solicita_destaques {
-    position: absolute;
-    right: 0;
-    top: 260%;
+.solicita_destaques
+{
+position:absolute;
+right:0;
+top:260%;
 }
-
-.destaques_baixo {
-    position: absolute;
-    top: -10%;
+.destaques_baixo{
+  position: absolute;
+  top:-10%;
 }
+.vermais{
+  position: absolute;
+  right: 14%;	
 
-.vermais {
-    position: absolute;
-    right: 14%;
+
 }
-
-.destaques_titulo {
-    color: #D6522E;
-    left: 15%;
-    font-weight: 250;
+.destaques_titulo{
+  color:#D6522E;
+  left: 15%;
+  font-weight: 250;
 }
-
-.solicitar {
-    color: #fff;
-    position: absolute;
-    top: 15%;
+.solicitar{
+  color:#fff;
+  position: absolute;
+  top:15%;
 }
-
-.activer_destaque {
-    position: absolute;
-    top: 33px;
+.activer_destaque{
+  position: absolute;
+  top:33px;
 }
-
-.solicitar_orcamento {
-    position: absolute;
-    top: 10%;
+.solicitar_orcamento{
+  position: absolute;
+  top:10%;
 }
-
-.orc_active {
-    position: absolute;
-    top: 100%;
-    left: 0;
+.orc_active{
+  position: absolute;
+  top:100%;
+  left: 0;
 }
-
-.saloes {
-    position: absolute;
-    right: 5%;
-    top: 10%;
-    color: #D6522E;
+.saloes{
+  position: absolute;
+  right: 5%;
+  top:10%;
+  color:#D6522E;
 }
-
-.btn_add {
-    color: #D6522E;
+.btn_add{
+  color:#D6522E;
 }
-
-
 /*servicos*/
+.servico1{
+position: absolute;
+top:40%;
+left: 5%;
+}
+.servico2{
+position: absolute;
+top:40%;
+left: 36.5%;
+}
+.servico3{
+position: absolute;
+top:40%;
+right: 5%;
+}
+.movePrevCarousel{
+  position: absolute;
+  left: -1%;
+ top:-280px;
+}
+.moveNextCarousel{
+  position: absolute;
+  top:-280px;
+  right: -1%;
+}
+.saloes_orcamento{
+   color:#D6522E;
+   position: absolute;
+   right: 6%;
+   top:10%;
+}
+.saloes_orcamento_black{
+color:#000;
+   position: absolute;
+   right: 8%;
+   top:10%;
+}
+.arraste{
+  position: absolute;
+  bottom: 7%;
+  left: 40%;
+}
+.add_servico{
+  position: absolute;
+top:58%;
+left: 347px;
+ border: 1px solid #fff; 
 
-.servico1 {
-    position: absolute;
-    top: 40%;
-    left: 5%;
 }
 
-.servico2 {
-    position: absolute;
-    top: 40%;
-    left: 36.5%;
+.add_servico2{
+  position: absolute;
+ top:57%;
+left: 780px;
+ border: 1px solid #fff; 
+
 }
+.add_servico3{
+  position: absolute;
+top:56.5%;
+right: 95px;
+ border: 1px solid #fff; 
 
-.servico3 {
-    position: absolute;
-    top: 40%;
-    right: 5%;
 }
-
-.movePrevCarousel {
-    position: absolute;
-    left: -1%;
-    top: -280px;
-}
-
-.moveNextCarousel {
-    position: absolute;
-    top: -280px;
-    right: -1%;
-}
-
-.saloes_orcamento {
-    color: #D6522E;
-    position: absolute;
-    right: 6%;
-    top: 10%;
-}
-
-.saloes_orcamento_black {
-    color: #000;
-    position: absolute;
-    right: 8%;
-    top: 10%;
-}
-
-.arraste {
-    position: absolute;
-    bottom: 7%;
-    left: 40%;
-}
-
-.add_servico {
-    position: absolute;
-    top: 58%;
-    left: 347px;
-    border: 1px solid #fff;
-}
-
-.add_servico2 {
-    position: absolute;
-    top: 57%;
-    left: 780px;
-    border: 1px solid #fff;
-}
-
-.add_servico3 {
-    position: absolute;
-    top: 56.5%;
-    right: 95px;
-    border: 1px solid #fff;
-}
-
-
 /*finalizar*/
-
-.ondas_fim {
+.ondas_fim
+{
+position: absolute;
+bottom: 6%;
+left: -5.5%;
+}
+.xxx_fim{
+  position: absolute;
+  bottom: 7.5%;
+  right: -1%;
+}
+.inicioCarousel{
+    font-family: Roboto,Light Italic;
+    text-decoration:underline;
     position: absolute;
-    bottom: 6%;
-    left: -5.5%;
+bottom: 8%;
+right:85%;
+color:#FFF;
 }
 
-.xxx_fim {
-    position: absolute;
-    bottom: 7.5%;
-    right: -1%;
+.gapernet{
+  font-family: Roboto,Light,Italic;
+  font-weight:400;
+  position: absolute;
+  bottom: 8%;
+  left: 45%;
+}
+.net{
+    font-family: Roboto,Light,Italic;
+  font-weight:200;
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+
+}
+.direitos{
+font-family: Roboto,Light,Italic;
+  font-weight:100;
+  position: absolute;
+  bottom: 6%;
+  left: 40%;
+
+}
+.instagran{
+   position: absolute;
+  bottom: 8%;
+  left: 80%;
+}
+.facebook{
+   position: absolute;
+  bottom: 8%;
+  left: 83%;
+}
+.whats{
+   position: absolute;
+  bottom: 8%;
+  left: 86%;
 }
 
-.inicioCarousel {
-    font-family: Roboto, Light Italic;
-    text-decoration: underline;
-    position: absolute;
-    bottom: 8%;
-    right: 85%;
-    color: #FFF;
+.email{
+ position: absolute;
+  bottom: 4.3%;
+  left: 79%;
 }
-
-.gapernet {
-    font-family: Roboto, Light, Italic;
-    font-weight: 400;
-    position: absolute;
-    bottom: 8%;
-    left: 45%;
-}
-
-.net {
-    font-family: Roboto, Light, Italic;
-    font-weight: 200;
-    position: absolute;
-    bottom: 8%;
-    left: 50%;
-}
-
-.direitos {
-    font-family: Roboto, Light, Italic;
-    font-weight: 100;
-    position: absolute;
-    bottom: 6%;
-    left: 40%;
-}
-
-.instagran {
-    position: absolute;
-    bottom: 8%;
-    left: 80%;
-}
-
-.facebook {
-    position: absolute;
-    bottom: 8%;
-    left: 83%;
-}
-
-.whats {
-    position: absolute;
-    bottom: 8%;
-    left: 86%;
-}
-
-.email {
-    position: absolute;
-    bottom: 4.3%;
-    left: 79%;
-}
-
-
 /*logo*/
-
-.logo_finalizar {
-    position: absolute;
-    left: 3%;
-    top: 1%;
+.logo_finalizar{
+  position: absolute;
+  left:3%;
+  top:1%;
 }
-
-.carrinho_finalizar {
+.carrinho_finalizar{
     position: absolute;
-    right: 4%;
-    top: 4%;
+  right:4%;
+  top:4%;
 }
-
-.logo {
-    position: absolute;
-    left: 5%;
+.logo{
+  position: absolute;
+  left: 5%;
 }
-
-
 /*formulário finalizar*/
-
-.formulario {
-    font-family: Roboto, Light, Italic;
-    margin-top: 2%;
-    margin-left: 10%;
-    color: #D6522E;
-    line-height: 1px;
-    max-height: 10px;
+.formulario{
+  font-family: Roboto,Light,Italic;
+  margin-top:2%;
+  margin-left: 10%;
+ color:#D6522E;
+ line-height: 1px;
+ max-height: 10px;
 }
-
+ /* label focus color */
+ .input-field input:focus + label {
+   color: red !important;
+ }
+ /* label underline focus color */
+ .row .input-field .textarea1 input:focus {
+   border-bottom: 1px solid red !important;
+   box-shadow: 0 1px 0 0 red !important
+ }
 
 /* label focus color */
-
-.input-field input:focus+label {
-    color: red !important;
+ .input-field .textarea1  input:focus + label {
+   color: red !important;
+ }
+ /* label underline focus color */
+ .row .input-field .textarea1 input:focus {
+   border-bottom: 1px solid red !important;
+   box-shadow: 0 1px 0 0 red !important
+ }
+.finalizar_orcamento{
+  color:#000;
+  position: absolute;
+  top:13%;
+  left:3%;
 }
-
-
-/* label underline focus color */
-
-.row .input-field .textarea1 input:focus {
-    border-bottom: 1px solid red !important;
-    box-shadow: 0 1px 0 0 red !important
+.finaliza_active{
+position:absolute;
+left:1%;
 }
-
-
-/* label focus color */
-
-.input-field .textarea1 input:focus+label {
-    color: red !important;
-}
-
-
-/* label underline focus color */
-
-.row .input-field .textarea1 input:focus {
-    border-bottom: 1px solid red !important;
-    box-shadow: 0 1px 0 0 red !important
-}
-
-.finalizar_orcamento {
-    color: #000;
-    position: absolute;
-    top: 13%;
-    left: 3%;
-}
-
-.finaliza_active {
-    position: absolute;
-    left: 1%;
-}
-
-
 /*sobre nos*/
+.sobrenos{
+  position: relative;
+  top:-25px;
+  z-index: 1;
 
-.sobrenos {
-    position: relative;
-    top: -25px;
-    z-index: 1;
+}
+.sobre_h6{
+  font-family: Roboto,Light,Italic;
+  font-weight: 400;
+  position: absolute;
+  left: 5%;
+  top:10%;
+}
+.active_sobrenos{
+position: absolute;
+left:0;
+
+}
+.texto_sobrenos
+{
+position: absolute;
+top:19%;
 }
 
-.sobre_h6 {
-    font-family: Roboto, Light, Italic;
-    font-weight: 400;
-    position: absolute;
-    left: 5%;
-    top: 10%;
-}
-
-.active_sobrenos {
-    position: absolute;
-    left: 0;
-}
-
-.texto_sobrenos {
-    position: absolute;
-    top: 19%;
-}
-
-.tex_sobre {
-    font-family: Roboto, Light, Italic;
+.tex_sobre{
+    font-family: Roboto,Light,Italic;
     font-weight: 200;
-    color: #FFF;
-    position: absolute;
-    left: 1.5%;
+    color:#FFF;
+  position: absolute;
+  left: 1.5%;
 }
+.solicite_sobrenos
+{
+position: absolute;
 
-.solicite_sobrenos {
-    position: absolute;
-    right: 3%;
-    top: 400px;
-    color: #FFF;
+right: 3%;
+top:400px;
+color:#FFF;
+
 }
-
-.sublinhado_sobrenos {
-    position: absolute;
-    bottom: 0.5%;
-    z-index: -1;
+.sublinhado_sobrenos
+{
+  position: absolute;
+bottom:0.5%;
+  z-index: -1;
 }
-
-
 /*contato*/
+.contato_h6{
+margin-top: -10%;
+margin-left: 3%;
+font-family: Roboto,Light,Italic;
+font-weight: 300;
 
-.contato_h6 {
-    margin-top: -10%;
-    margin-left: 3%;
-    font-family: Roboto, Light, Italic;
-    font-weight: 300;
 }
-
-.active_contato {
-    position: absolute;
-    left: 3%;
-    margin-top: 1.8%;
+.active_contato
+{
+  position: absolute;
+  left:3%;
+  margin-top: 1.8%;
 }
-
-.nome_contato {
-    position: absolute;
-    left: 10px;
+.nome_contato{
+  position: absolute;
+  left: 10px;
 }
-
-.captura {
-    font-family: Roboto, Light, Italic;
-    font-weight: 200;
-    color: #FFF;
-    position: absolute;
-    top: 40%;
-    left: 30%;
+.captura{
+  font-family: Roboto,Light,Italic;
+  font-weight: 200;
+  color:#FFF;
+  position: absolute;
+  top:40%;
+  left:30%;
 }
+.facaparte{
 
-.facaparte {
-    font-family: PETAL, Light, Italic;
-    font-weight: 200;
-    color: #FFF;
-    position: absolute;
-    top: 50%;
-    left: 38%;
+ font-family: PETAL,Light,Italic;
+  font-weight: 200;
+  color:#FFF;
+  position: absolute;
+  top:50%;
+  left:38%;
+  
+
 }
+.sublinhado_captura{
 
-.sublinhado_captura {
-    position: absolute;
-    top: 55%;
-    left: 37.5%;
-    z-index: -1;
-    font-family: PETAL, Light, Italic;
-    font-weight: 200;
-    color: #FFF;
+  position: absolute;
+  top:55%;
+  left:37.5%;
+  z-index: -1;
+
+ font-family: PETAL,Light,Italic;
+  font-weight: 200;
+  color:#FFF;
 }
+.contato_msg_final{
+    font-family: Roboto,Light,Italic;
+  font-weight: 200;
+  position: absolute;
+margin-top: 6%;
+  left: 25%;
+    color:#D6522E;
 
-.contato_msg_final {
-    font-family: Roboto, Light, Italic;
-    font-weight: 200;
-    position: absolute;
-    margin-top: 6%;
-    left: 25%;
-    color: #D6522E;
 }
+.endereco_rua{
+     font-family: Roboto,Light,Italic;
+  font-weight: 500; 
+position: absolute;
+margin-top: 1s%;
+  left: 25%;
+  color:#000;
 
-.endereco_rua {
-    font-family: Roboto, Light, Italic;
-    font-weight: 500;
-    position: absolute;
-    margin-top: 1s%;
-    left: 25%;
-    color: #000;
 }
-
 
 /*footer*/
+.footer{
+ margin-top: -12.5%;
+  height: 210px;
 
-.footer {
-    margin-top: -12.5%;
-    height: 210px;
+
 }
-
-.laranja_footer {
-    position: absolute;
-    left: -7%;
-    top: 60%;
+.laranja_footer{
+position: absolute;
+left: -7%;
+top:60%;
 }
+.gapernet_footer{
+  font-family: Roboto,Light,Italic;
+  font-weight:400;
+  color:#FFF;
+  position: absolute;
+  bottom: 30%;
+  left: 45%;
 
-.gapernet_footer {
-    font-family: Roboto, Light, Italic;
-    font-weight: 400;
-    color: #FFF;
-    position: absolute;
-    bottom: 30%;
-    left: 45%;
+
 }
+.net{
+    font-family: Roboto,Light,Italic;
+  font-weight:200;
+    color:#FFF;
+  position: absolute;
+  bottom: 30%;
+  left: 50%;
 
-.net {
-    font-family: Roboto, Light, Italic;
-    font-weight: 200;
-    color: #FFF;
-    position: absolute;
-    bottom: 30%;
-    left: 50%;
 }
+.direitos_footer{
+font-family: Roboto,Light,Italic;
+color:#FFF;
+  font-weight:100;
+  position: absolute;
+  bottom: 1%;
+  left: 40%;
 
-.direitos_footer {
-    font-family: Roboto, Light, Italic;
-    color: #FFF;
-    font-weight: 100;
-    position: absolute;
-    bottom: 1%;
-    left: 40%;
 }
+.instagran_footer{
 
-.instagran_footer {
-    position: absolute;
-    bottom: 30%;
-    left: 75%;
+   position: absolute;
+  bottom: 30%;
+  left: 75%;
 }
+.facebook_footer{
 
-.facebook_footer {
-    position: absolute;
-    bottom: 30%;
-    left: 78%;
+   position: absolute;
+  bottom: 30%;
+  left: 78%;
 }
+.whats_footer
+{
 
-.whats_footer {
-    position: absolute;
-    bottom: 30%;
-    left: 81%;
+   position: absolute;
+  bottom: 30%;
+  left: 81%;
 }
-
-.xxx_footer {
-    position: absolute;
-    bottom: 50%;
-    right: -1.5%;
+.xxx_footer{
+   position: absolute;
+  bottom: 50%;
+  right: -1.5%;
 }
-
-.email_footer {
-    color: #FFF;
-    position: absolute;
-    bottom: 12%;
-    left: 74%;
+.email_footer{
+  color:#FFF;
+ position: absolute;
+  bottom: 12%;
+  left: 74%;
 }
-
 </style>

@@ -31,15 +31,10 @@ p {
 
 .tab_menu {
   position: absolute;
-  left: -2%;
+  left: 20%;
+  top: 4%;
 }
 
-.menu {
-  position: absolute;
-  left: 30%;
-  right: 10%;
-  top: 3%;
-}
 .xxx {
   position: absolute;
   left: 12%;

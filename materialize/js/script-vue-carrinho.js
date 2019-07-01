@@ -4,6 +4,7 @@ new Vue({
     todos: [],
     titulo: "variavel teste",
     salao1: "Clube de Caça e Pesca",
+    salao19: "Cabine Fotográfica",
     //  salao2: "G2",
     //salao
     salao4: "El Maestro",
@@ -27,12 +28,13 @@ new Vue({
     salao17: "Secret Segurança",
     //cerimonialista
     salao18: "Difere Eventos"
+
     //salao19: "Secret Segurança",
     //  salao20: "Secret Segurança",
   },
   methods: {
     servico1: function() {
-      this.todos.push(this.salao1);
+      this.todos.push(this.salao18);
     },
     servico2: function() {
       this.todos.push(this.salao2);
@@ -91,6 +93,9 @@ new Vue({
             */
     servico18: function() {
       this.todos.push(this.salao18);
+    },
+    servico19: function() {
+      this.todos.push(this.salao19);
     },
     deleteItem: function(index) {
       this.todos.splice(index, 1);

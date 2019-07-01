@@ -1,3 +1,33 @@
+
+<?php 
+include 'conection.php';
+$nome = $_POST['nome'];
+$evento =$_POST['tipo'];
+$email =$_POST['email'];
+$whats = $_POST['whats'];
+$data = $_POST['data'];
+$convidados = $_POST['convidados'];
+$obs = $_POST['obs'];
+$pedido[] = $_POST["pedido"][0];
+
+                  foreach ($values_gender as $values){
+
+                    echo $values;
+
+                  }
+var_dump($pedido)
+//	$result_usuario = "INSERT INTO pedido ('id','nome','email','whats','envento','data','convidados','obs','pedido')  VALUES (NULL,'$nome','$email','$whats','$evento','$data','$convidados','$obs','$pedido')";
+//	$resultado_usuario = mysqli_query($conn, $result_usuario);
+
+?>
+
+
+
+
+
+
+
+
 <!---materialize css -->
 <link rel="stylesheet" href="materialize/css/materialize.css">
 <link rel="stylesheet" href="materialize/css/custom.css">
